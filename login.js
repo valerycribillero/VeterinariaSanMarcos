@@ -14,7 +14,7 @@ function ingresar(){
         return;
     }
         //entrada usuario
-    if (correo === "dueño@veterinaria.cl" && clave === "1234"){
+    if (correo === "adri@gmail.cl" && clave === "1234"){
         window.location.href = "veterinaria.html"; // se debe hacer una pantalla de usuario
     }
     // else if (correo === "usuario@demo.cl" && clave === "5678") //debemos hacer cuentas especificas para los distintos usuarios
