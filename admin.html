@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria San Marcos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body class="d-flex bg-light">
+<!-- Navbar vertical para administrador -->
+<aside class="bg-white border-end vh-100 p-3 d-flex flex-column" style="width: 250px;">
+
+    <!-- Logo -->
+    <a href="#" class="d-flex align-items-center text-decoration-none text-dark mb-4">
+        <img src="img/logo.png" alt="Logo Veterinaria San Marcos" width="45" height="45" class="me-2">
+        <span class="fw-bold">Veterinaria<br>San Marcos</span>
+    </a>
+    <!-- Menú administrador -->
+    <p class="text-muted small text-uppercase mb-2">Administración</p>
+    <ul class="nav nav-pills flex-column gap-2">
+        <li class="nav-item">
+            <a class="nav-link active" href="admin.html">
+                Inicio
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="usuariosAd.html">
+                Usuarios
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="serviciosAd.html">
+                Servicios
+            </a>
+        </li>
+    </ul>
+    <!-- Opciones ubicadas abajo -->
+    <div class="mt-auto">
+        <hr>
+
+        <ul class="nav flex-column gap-2">
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="perfil.html">
+                    Mi perfil
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-danger" href="index.html">
+                    Cerrar sesión
+                </a>
+            </li>
+        </ul>
+    </div>
+</aside>
+
+<!-------Panel de administrador------->
+<main class="flex-grow-1 p-4">
+    <h1 class="h3">¡Hola, Administrador!</h1>
+    <p class="text-muted">
+        Bienvenido al panel de administración de Veterinaria San Marcos.
+    </p>
+    <div class="row mt-4">
+        <div class="col-md-6 mb-3">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h2 class="h5">Usuarios</h2>
+                    <p>Administra los usuarios del sistema.</p>
+                    <a href="usuariosAd.html" class="btn btn-primary">
+                        Ver usuarios
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h2 class="h5">Servicios</h2>
+                    <p>Administra los Servicios de la veterinaria.</p>
+
+                    <a href="serviciosAd.html" class="btn btn-primary">
+                        Ver Servicios
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

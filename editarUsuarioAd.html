@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar usuario | Veterinaria San Marcos</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+</head>
+
+<body class="d-flex bg-light">
+
+    <aside class="bg-white border-end vh-100 p-3 d-flex flex-column flex-shrink-0"
+            style="width: 250px;">
+
+        <a href="admin.html"
+            class="d-flex align-items-center text-decoration-none text-dark mb-4">
+
+            <img src="img/logo.png"
+                alt="Logo Veterinaria San Marcos"
+                width="45"
+                height="45"
+                class="me-2">
+
+            <span class="fw-bold">
+                Veterinaria<br>
+                San Marcos
+            </span>
+        </a>
+
+        <p class="text-muted small text-uppercase mb-2">
+            Administración
+        </p>
+
+        <ul class="nav nav-pills flex-column gap-2">
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="admin.html">
+                    Inicio
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link active" href="usuariosAd.html">
+                    Usuarios
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="serviciosAd.html">
+                    Servicios
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <main class="flex-grow-1 p-4">
+
+        <div class="mb-4">
+            <h1 class="h3">Editar usuario</h1>
+            <p class="text-muted">
+                Modifica los datos del usuario seleccionado.
+            </p>
+        </div>
+
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+
+                <form id="formEditarUsuario">
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+                            <label for="run" class="form-label">RUN</label>
+
+                            <input type="text"
+                                id="run"
+                                class="form-control"
+                                maxlength="9"
+                                readonly>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="rol" class="form-label">
+                                Perfil / rol
+                            </label>
+
+                            <select id="rol" class="form-select" required>
+                                <option value="Administrador">Administrador</option>
+                                <option value="Vendedor">Vendedor</option>
+                                <option value="Cliente">Cliente</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+
+                            <input type="text"
+                                id="nombre"
+                                class="form-control"
+                                required>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="apellidos" class="form-label">
+                                Apellidos
+                            </label>
+
+                            <input type="text"
+                                id="apellidos"
+                                class="form-control"
+                                required>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="correo" class="form-label">
+                                Correo electrónico
+                            </label>
+
+                            <input type="email"
+                                id="correo"
+                                class="form-control"
+                                required>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="telefono" class="form-label">
+                                Teléfono
+                            </label>
+
+                            <input type="tel"
+                                id="telefono"
+                                class="form-control">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="region" class="form-label">Región</label>
+
+                            <select id="region" class="form-select" required>
+                                <option value="">Selecciona una región</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="comuna" class="form-label">Comuna</label>
+
+                            <select id="comuna" class="form-select" required>
+                                <option value="">Selecciona una comuna</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label for="direccion" class="form-label">
+                                Dirección
+                            </label>
+
+                            <input type="text"
+                                id="direccion"
+                                class="form-control"
+                                required>
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-primary">
+                            Guardar cambios
+                        </button>
+
+                        <a href="usuariosAd.html" class="btn btn-secondary">
+                            Cancelar
+                        </a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="editarUsuarioAd.js"></script>
+</body>
+</html>

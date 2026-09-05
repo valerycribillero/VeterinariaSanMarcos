@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios | Veterinaria San Marcos</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+</head>
+
+<body class="d-flex bg-light">
+
+    <!-- Menú vertical -->
+    <aside class="bg-white border-end vh-100 p-3 d-flex flex-column flex-shrink-0"
+            style="width: 250px;">
+
+        <a href="admin.html"
+            class="d-flex align-items-center text-decoration-none text-dark mb-4">
+
+            <img src="img/logo.png"
+                alt="Logo Veterinaria San Marcos"
+                width="45"
+                height="45"
+                class="me-2">
+
+            <span class="fw-bold">
+                Veterinaria<br>
+                San Marcos
+            </span>
+        </a>
+
+        <p class="text-muted small text-uppercase mb-2">
+            Administración
+        </p>
+
+        <ul class="nav nav-pills flex-column gap-2">
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="admin.html">
+                    Inicio
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link active" href="usuariosAd.html">
+                    Usuarios
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="serviciosAd.html">
+                    Servicios
+                </a>
+            </li>
+        </ul>
+
+        <div class="mt-auto">
+            <hr>
+
+            <ul class="nav flex-column gap-2">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="perfil.html">
+                        Mi perfil
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-danger" href="index.html">
+                        Cerrar sesión
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Contenido -->
+    <main class="flex-grow-1 p-4">
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h1 class="h3 mb-1">Usuarios</h1>
+                <p class="text-muted mb-0">
+                    Listado de usuarios registrados en el sistema.
+                </p>
+            </div>
+
+            <a href="crearUsuarioAd.html" class="btn btn-dark">
+                Nuevo usuario
+            </a>
+        </div>
+
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>RUN</th>
+                                <th>Nombre</th>
+                                <th>Apellidos</th>
+                                <th>Correo</th>
+                                <th>Perfil</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>12345678</td>
+                                <td>María</td>
+                                <td>González</td>
+                                <td>maria@email.cl</td>
+                                <td>
+                                    <span class="badge text-bg-primary">
+                                        Administrador
+                                    </span>
+                                </td>
+                                <td>
+                                    <a href="editarUsuarioAd.html"
+                                        class="btn btn-warning btn-sm">
+                                        Editar
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>98765432</td>
+                                <td>Juan</td>
+                                <td>Pérez</td>
+                                <td>juan@email.cl</td>
+                                <td>
+                                    <span class="badge text-bg-success">
+                                        Vendedor
+                                    </span>
+                                </td>
+                                <td>
+                                    <a href="editarUsuarioAd.html"
+                                        class="btn btn-warning btn-sm">
+                                        Editar
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>11222333</td>
+                                <td>Camila</td>
+                                <td>Rojas</td>
+                                <td>camila@email.cl</td>
+                                <td>
+                                    <span class="badge text-bg-secondary">
+                                        Cliente
+                                    </span>
+                                </td>
+                                <td>
+                                    <a href="editarUsuarioAd.html"
+                                        class="btn btn-warning btn-sm">
+                                        Editar
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

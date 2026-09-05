@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo servicio | Veterinaria San Marcos</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+</head>
+
+<body class="d-flex bg-light">
+
+    <aside class="bg-white border-end vh-100 p-3 d-flex flex-column flex-shrink-0"
+        style="width: 250px;">
+
+        <a href="admin.html"
+            class="d-flex align-items-center text-decoration-none text-dark mb-4">
+
+            <img src="img/logo.png"
+                alt="Logo Veterinaria San Marcos"
+                width="45"
+                height="45"
+                class="me-2">
+
+            <span class="fw-bold">
+                Veterinaria<br>
+                San Marcos
+            </span>
+        </a>
+
+        <p class="text-muted small text-uppercase mb-2">
+            Administración
+        </p>
+
+        <ul class="nav nav-pills flex-column gap-2">
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="admin.html">
+                    Inicio
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="usuariosAd.html">
+                    Usuarios
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link active" href="serviciosAd.html">
+                    Servicios
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <main class="flex-grow-1 p-4">
+
+        <div class="mb-4">
+            <h1 class="h3">Nuevo servicio</h1>
+            <p class="text-muted">
+                Completa los datos para agregar un servicio al catálogo.
+            </p>
+        </div>
+
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+
+                <form id="formCrearServicio">
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+                            <label for="codigo" class="form-label">
+                                Código
+                            </label>
+
+                            <input type="text"
+                                id="codigo"
+                                class="form-control"
+                                placeholder="Ejemplo: SV006"
+                                required>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="categoria" class="form-label">
+                                Categoría
+                            </label>
+
+                            <select id="categoria" class="form-select" required>
+                                <option value="">Selecciona una categoría</option>
+                                <option value="Consultas">Consultas</option>
+                                <option value="Vacunación">Vacunación</option>
+                                <option value="Cirugía">Cirugía</option>
+                                <option value="Desparasitación">Desparasitación</option>
+                                <option value="Exámenes">Exámenes</option>
+                                <option value="Otros">Otros</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="nombre" class="form-label">
+                                Nombre del servicio
+                            </label>
+
+                            <input type="text"
+                                id="nombre"
+                                class="form-control"
+                                placeholder="Ejemplo: Consulta general"
+                                required>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="especie" class="form-label">
+                                Especie
+                            </label>
+
+                            <select id="especie" class="form-select" required>
+                                <option value="">Selecciona una especie</option>
+                                <option value="Perro">Perro</option>
+                                <option value="Gato">Gato</option>
+                                <option value="Perro / Gato">Perro / Gato</option>
+                                <option value="Ave / Conejo">Ave / Conejo</option>
+                                <option value="Todas">Todas</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="duracion" class="form-label">
+                                Duración
+                            </label>
+
+                            <input type="text"
+                                id="duracion"
+                                class="form-control"
+                                placeholder="Ejemplo: 30 min"
+                                required>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="precio" class="form-label">
+                                Precio
+                            </label>
+
+                            <input type="number"
+                                id="precio"
+                                class="form-control"
+                                placeholder="Ejemplo: 15000"
+                                min="1"
+                                required>
+                        </div>
+
+                        <div class="col-12 mb-3">
+                            <label for="observaciones" class="form-label">
+                                Observaciones
+                            </label>
+
+                            <textarea id="observaciones"
+                                    class="form-control"
+                                    rows="3"
+                                    placeholder="Ejemplo: Requiere ficha previa"></textarea>
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-primary">
+                            Guardar servicio
+                        </button>
+
+                        <a href="serviciosAd.html" class="btn btn-secondary">
+                            Cancelar
+                        </a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="crearServicio.js"></script>
+</body>
+</html>

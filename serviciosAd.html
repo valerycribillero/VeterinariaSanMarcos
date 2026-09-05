@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | Veterinaria San Marcos</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+</head>
+
+<body class="d-flex bg-light">
+
+    <!-- Menú vertical -->
+    <aside class="bg-white border-end vh-100 p-3 d-flex flex-column flex-shrink-0"
+        style="width: 250px;">
+
+        <a href="admin.html"
+            class="d-flex align-items-center text-decoration-none text-dark mb-4">
+
+            <img src="img/logo.png"
+                alt="Logo Veterinaria San Marcos"
+                width="45"
+                height="45"
+                class="me-2">
+
+            <span class="fw-bold">
+                Veterinaria<br>
+                San Marcos
+            </span>
+        </a>
+
+        <p class="text-muted small text-uppercase mb-2">
+            Administración
+        </p>
+
+        <ul class="nav nav-pills flex-column gap-2">
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="admin.html">
+                    Inicio
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="usuariosAd.html">
+                    Usuarios
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link active" href="serviciosAd.html">
+                    Servicios
+                </a>
+            </li>
+        </ul>
+
+        <div class="mt-auto">
+            <hr>
+
+            <ul class="nav flex-column gap-2">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="perfil.html">
+                        Mi perfil
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-danger" href="index.html">
+                        Cerrar sesión
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Contenido de servicios -->
+    <main class="flex-grow-1 p-4">
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h1 class="h3 mb-1">Servicios</h1>
+                <p class="text-muted mb-0">
+                    Catálogo de servicios veterinarios.
+                </p>
+            </div>
+
+            <a href="crearServicioAd.html" class="btn btn-dark">
+                Nuevo servicio
+            </a>
+        </div>
+
+        <!-- Buscador y filtro: se usarán en serviciosAd.js -->
+        <div class="row mb-3">
+            <div class="col-md-6 mb-2">
+                <input type="text"
+                        id="buscadorServicios"
+                        class="form-control"
+                        placeholder="Buscar por código, categoría o servicio">
+            </div>
+
+            <div class="col-md-3 mb-2">
+                <select id="filtroCategoria" class="form-select">
+                    <option value="">Todas las categorías</option>
+                    <option value="Consultas">Consultas</option>
+                    <option value="Vacunación">Vacunación</option>
+                    <option value="Cirugía">Cirugía</option>
+                    <option value="Desparasitación">Desparasitación</option>
+                    <option value="Exámenes">Exámenes</option>
+                    <option value="Otros">Otros</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover table-sm align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Código</th>
+                                <th>Categoría</th>
+                                <th>Servicio</th>
+                                <th>Especie</th>
+                                <th>Duración</th>
+                                <th>Precio</th>
+                                <th>Observaciones</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+
+                        <!-- serviciosAd.js agregará las filas aquí -->
+                        <tbody id="tablaServicios">
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="serviciosAd.js"></script>
+</body>
+</html>
