@@ -80,6 +80,12 @@ body {
     color: white;
 }
 
+.tienda .btn-primary:hover{
+    background-color: white;
+    color: white;
+    border:white;
+}
+
 .inicio .btn-secondary:hover {
     background-color: white;
     color: white;
@@ -154,3 +160,74 @@ body {
     color: #8fb2a8;
 }
 
+.foto{
+    max-width: 900px;
+    margin: 100px auto;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.beneficios {
+    padding: 65px 8%;
+
+    text-align: center;
+
+    background-color: #f7f7f4;
+}
+
+.beneficios h2 {
+    color: #063b2c;
+
+    font-size: 32px;
+
+    margin-bottom: 8px;
+}
+
+.subtitulo {
+    color: #777;
+
+    margin-bottom: 40px;
+}
+
+.beneficios-grid {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.beneficio {
+    background-color: white;
+
+    padding: 30px 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,.06);
+}
+
+.icono {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.beneficio h3 {
+    color: #063b2c;
+
+    font-size: 20px;
+}
+
+.beneficio p {
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}

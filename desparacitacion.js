@@ -1,4 +1,4 @@
-let desparacitacion = [
+let desparasitaciones = [
     {
         codigo: "DE001",
         nombre: "Desparasitación interna pequeños (<10 kg)",
@@ -36,25 +36,34 @@ let desparacitacion = [
     }
 ];
 
-let lista = document.getElementById("listaDesparacitaciones");
-for (let i = 0; i < desparacitacion.length; i++){
-    lista.innerHTML += `
+let listaDesparasitaciones =
+    document.getElementById("listaDesparacitaciones");
+
+
+for (let i = 0; i < desparasitaciones.length; i++) {
+
+    listaDesparasitaciones.innerHTML += `
         <div>
-            <h2>${desparacitacion[i].nombre}</h2>
-            <p>Precio: $${desparacitacion[i].precio}</p>
-            <button onclick="verDetalle('${desparacitacion[i].codigo}')">
-                ver detalle
+            <h2>${desparasitaciones[i].nombre}</h2>
+
+            <p>Precio: $${desparasitaciones[i].precio}</p>
+
+            <button onclick="verDetalleDesparasitacion('${desparasitaciones[i].codigo}')">
+                Ver detalle
             </button>
-            <hr>
         </div>
     `;
 }
 
-function verDetalle(codigo){
+
+function verDetalleDesparasitacion(codigo) {
+
     let desSeleccionada;
-    for(let i = 0; i<desparacitacion.length; i++){
-        if(desparacitacion[i].codigo == codigo){
-            desSeleccionada = desparacitacion[i];
+
+    for (let i = 0; i < desparasitaciones.length; i++) {
+
+        if (desparasitaciones[i].codigo == codigo) {
+            desSeleccionada = desparasitaciones[i];
         }
     }
 
@@ -63,5 +72,5 @@ function verDetalle(codigo){
         JSON.stringify(desSeleccionada)
     );
 
-    window.location.href = "detalleDes.html"
+    window.location.href = "detalleDes.html";
 }

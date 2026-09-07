@@ -36,32 +36,39 @@ let consultas = [
     }
 ];
 
-let lista = document.getElementById("listaConsultas");
-for (let i = 0; i < consultas.length; i++){
-    lista.innerHTML += `
+let listaConsultas = document.getElementById("listaConsultas");
+
+for (let i = 0; i < consultas.length; i++) {
+
+    listaConsultas.innerHTML += `
         <div>
             <h2>${consultas[i].nombre}</h2>
+
             <p>Precio: $${consultas[i].precio}</p>
-            <button onclick="verDetalle('${consultas[i].codigo}')">
-                ver detalle
+
+            <button onclick="verDetalleConsulta('${consultas[i].codigo}')">
+                Ver detalle
             </button>
-            <hr>
         </div>
     `;
 }
 
-function verDetalle(codigo){
-    let conSeleccionada;
-    for(let i = 0; i<consultas.length; i++){
-        if(consultas[i].codigo == codigo){
-            conSeleccionada = consultas[i];
+
+function verDetalleConsulta(codigo) {
+
+    let consultaSeleccionada;
+
+    for (let i = 0; i < consultas.length; i++) {
+
+        if (consultas[i].codigo == codigo) {
+            consultaSeleccionada = consultas[i];
         }
     }
 
     localStorage.setItem(
         "consulta",
-        JSON.stringify(conSeleccionada)
+        JSON.stringify(consultaSeleccionada)
     );
 
-    window.location.href = "detalle.html"
+    window.location.href = "detalle.html";
 }
