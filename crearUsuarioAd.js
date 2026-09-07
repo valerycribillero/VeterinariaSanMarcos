@@ -1,12 +1,10 @@
 let regiones = {
-    "Metropolitana": ["Santiago", "Maipú", "Puente Alto", "Providencia"],
-    "Valparaíso": ["Valparaíso", "Viña del Mar", "Quilpué"],
-    "Biobío": ["Concepción", "Talcahuano", "Los Ángeles"]
+    "Libertador General Bernardo O'Higgins": ["Rancagua"]
 };
 
 let region = document.getElementById("region");
 let comuna = document.getElementById("comuna");
-let formulario = document.getElementById("formCrearUsuario");
+let formulario = document.getElementById("formCrearUsuarioAd");
 
 /* Mostrar regiones */
 for (let nombreRegion in regiones) {
@@ -41,7 +39,7 @@ formulario.addEventListener("submit", function (event) {
     let run = document.getElementById("run").value;
     let nombre = document.getElementById("nombre").value;
     let apellidos = document.getElementById("apellidos").value;
-    let correo = document.getElementById("correo").value;
+    let correo = document.getElementById("correo").value.trim();
     let rol = document.getElementById("rol").value;
     let direccion = document.getElementById("direccion").value;
 
@@ -55,8 +53,22 @@ formulario.addEventListener("submit", function (event) {
         return;
     }
 
-    if (!correo.includes("@")) {
-        alert("Debes ingresar un correo válido.");
+    if (nombre.length > 100 || apellidos.length > 100) {
+        alert("El nombre y los apellidos no pueden superar los 100 caracteres.");
+        return;
+    }
+
+    if (correo === "" || correo.length > 100) {
+        alert("El correo es obligatorio y no puede superar los 100 caracteres.");
+        return;
+    }
+
+    if (
+        !correo.endsWith("@duoc.cl") &&
+        !correo.endsWith("@profesor.duoc.cl") &&
+        !correo.endsWith("@gmail.com")
+    ) {
+        alert("El correo debe ser @duoc.cl, @profesor.duoc.cl o @gmail.com.");
         return;
     }
 
