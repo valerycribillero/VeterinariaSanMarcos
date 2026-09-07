@@ -22,7 +22,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     isValid = false;
   }
 
-  const allowedDomains = ['@duoc.cl', '@profesor.duoc.cl', '@gmail.com'];
+  const allowedDomains = ['@duocuc.cl', '@profesor.duoc.cl', '@gmail.com'];
   const domainValid = allowedDomains.some(domain => correo.endsWith(domain));
 
   if (!correo) {

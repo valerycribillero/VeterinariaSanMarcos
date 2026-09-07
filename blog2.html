@@ -3,77 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalle Blog - Veterinaria San Marcos</title>
+
+    <title>Blog 2 - Veterinaria San Marcos</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
+    <!-- NAVBAR -->
     <header>
         <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+
             <div class="container">
+
                 <a class="navbar-brand d-flex align-items-center" href="index.html">
+
                     <img src="img/logo.png"
-                         alt="Logo"
+                         alt="Logo Veterinaria San Marcos"
                          width="45"
                          height="45"
                          class="me-2">
-                    <span class="fw-bold">Veterinaria San Marcos</span>
+
+                    <span class="fw-bold">
+                        Veterinaria San Marcos
+                    </span>
+
                 </a>
+
 
                 <button class="navbar-toggler"
                         type="button"
                         data-bs-toggle="collapse"
-                        data-bs-target="#menuPrincipal">
+                        data-bs-target="#menuPrincipal"
+                        aria-controls="menuPrincipal"
+                        aria-expanded="false"
+                        aria-label="Abrir menú">
+
                     <span class="navbar-toggler-icon"></span>
+
                 </button>
 
+
                 <div class="collapse navbar-collapse" id="menuPrincipal">
+
                     <ul class="navbar-nav mx-auto">
+
                         <li class="nav-item">
-                            <a class="nav-link" href="inicio.html">Inicio</a>
+                            <a class="nav-link" href="index.html">
+                                Inicio
+                            </a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                            <a class="nav-link" href="nosotros.html">
+                                Nosotros
+                            </a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link active" href="servicios.html">Servicios</a>
+                            <a class="nav-link" href="servicios.html">
+                                Servicios
+                            </a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">Contacto</a>
+                            <a class="nav-link active" href="blogs.html">
+                                Blogs
+                            </a>
                         </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">
+                                Contacto
+                            </a>
+                        </li>
+
                     </ul>
 
+
                     <div class="d-flex align-items-center mt-3 mt-lg-0">
+
                         <a href="cita.html" class="btn btn-primary">
                             Pedir cita
                         </a>
+
                         <a href="login.html" class="btn btn-primary ms-2">
                             Login
                         </a>
+
                     </div>
+
                 </div>
+
             </div>
+
         </nav>
     </header>
 
-    <main class="container my-5" style="max-width: 800px;">
-        <article>
-            <h1 class="mb-3">CASO CURIOSO #1: Título completo de la noticia</h1>
-            <img src="img/blog1.jpg" class="img-fluid rounded mb-4" alt="Detalle del blog">
-            <div class="lh-lg text-secondary mb-4">
-                <p>Aquí va el texto explicativo de la noticia o caso curioso registrado en la veterinaria...</p>
+
+    <!-- CONTENIDO DEL BLOG -->
+    <main class="blog-detail-container">
+
+        <article class="blog-detail">
+
+            <h1>
+                Cuidados básicos para mantener saludable a tu mascota
+            </h1>
+
+
+            <img src="img/blog2.jpg"
+                 class="blog-detail-image"
+                 alt="Cuidados básicos para mantener saludable a una mascota.">
+
+
+            <div class="blog-detail-text">
+
+                <p>
+                    Mantener una mascota saludable requiere entregar cuidados
+                    constantes y prestar atención a sus necesidades. Además de
+                    una buena alimentación, es importante mantener hábitos de
+                    higiene y realizar controles veterinarios periódicos.
+                </p>
+
+                <p>
+                    La actividad física también cumple un papel importante.
+                    Los paseos y juegos permiten que los animales se mantengan
+                    activos, ayudan a prevenir el sobrepeso y contribuyen a
+                    su bienestar.
+                </p>
+
+                <p>
+                    También es fundamental mantener sus espacios limpios,
+                    proporcionar agua fresca y observar cualquier cambio en
+                    su comportamiento. Una modificación repentina en sus
+                    hábitos puede ser una señal de que necesita atención.
+                </p>
+
+                <p>
+                    Las visitas periódicas al veterinario permiten controlar
+                    su estado de salud, mantener sus vacunas al día y detectar
+                    posibles problemas de manera temprana.
+                </p>
+
+                <p>
+                    Con una alimentación adecuada, ejercicio, higiene y
+                    controles veterinarios, podemos contribuir a que nuestras
+                    mascotas tengan una vida más saludable y feliz.
+                </p>
+
             </div>
-            <a href="blogs.html" class="btn btn-secondary">← Volver a Blogs</a>
+
+
+            <div class="blog-detail-button">
+
+                <a href="blogs.html" class="btn btn-primary">
+                    ← Volver a Blogs
+                </a>
+
+            </div>
+
         </article>
+
     </main>
 
-    <footer class="bg-light py-4 border-top mt-auto">
+
+    <!-- FOOTER -->
+    <footer class="bg-light py-4 border-top">
+
         <div class="container text-center text-muted">
-            <p class="mb-0">&copy; 2026 Veterinaria San Marcos. Todos los derechos reservados.</p>
+
+            <p class="mb-0">
+                &copy; 2026 Veterinaria San Marcos.
+                Todos los derechos reservados.
+            </p>
+
         </div>
+
     </footer>
 
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
