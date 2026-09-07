@@ -1,0 +1,237 @@
+/* =========================
+   USUARIOS
+   ========================= */
+
+   body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   MENÚ LATERAL
+   ========================= */
+
+aside {
+    width: 250px;
+    min-height: 100vh;
+    background-color: white;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+aside > a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #063d2f !important;
+    margin-bottom: 30px;
+}
+
+aside > a img {
+    width: 45px;
+    height: 45px;
+}
+
+aside > a span {
+    font-weight: bold;
+}
+
+aside p {
+    color: #777;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   ENLACES DEL MENÚ
+   ========================= */
+
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside li {
+    margin-bottom: 8px;
+}
+
+aside li a {
+    display: block;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 6px;
+}
+
+aside li a:hover {
+    background-color: #063d2f !important;
+    color: white !important;
+}
+
+aside li a.active {
+    background-color: #063d2f !important;
+    color: white !important;
+    font-weight: bold;
+}
+
+aside > div {
+    margin-top: auto;
+}
+
+aside hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+aside a[href="index.html"] {
+    color: #dc3545;
+}
+
+
+/* =========================
+   CONTENIDO PRINCIPAL
+   ========================= */
+
+main {
+    flex-grow: 1;
+    padding: 35px;
+}
+
+main > div:first-child {
+    margin-bottom: 30px;
+}
+
+main h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+    color: #063d2f;
+}
+
+main > div:first-child p {
+    color: #063d2f !important;
+    margin: 0;
+}
+
+
+/* =========================
+   BOTÓN NUEVO USUARIO
+   ========================= */
+
+.btn-dark {
+    background-color: #063d2f !important;
+    border-color: #063d2f !important;
+    color: white !important;
+    padding: 10px 18px;
+    border-radius: 6px;
+}
+
+.btn-dark:hover {
+    background-color: #d99b43 !important;
+    border-color: #d99b43 !important;
+    color: white !important;
+}
+
+.btn-warning {
+    background-color: #d99b43 !important;
+    border-color: #d99b43 !important;
+    color: white !important;
+}
+/* =========================
+   TARJETA
+   ========================= */
+
+.card {
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card-body {
+    padding: 25px;
+}
+
+
+/* =========================
+   TABLA
+   ========================= */
+
+.table {
+    margin-bottom: 0;
+}
+
+.table th {
+    color: #063d2f;
+    font-weight: bold;
+}
+
+.table td {
+    color: #555;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f8f8f8;
+}
+
+
+/* =========================
+   BOTONES EDITAR
+   ========================= */
+
+.btn-editar {
+    background-color: #d99b43 !important;
+    border-color: #d99b43 !important;
+    color: white !important;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn-editar:hover {
+    background-color: #063d2f !important;
+    border-color: #063d2f !important;
+    color: white !important;
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    body {
+        display: block;
+    }
+
+    aside {
+        width: 100%;
+        min-height: auto;
+    }
+
+    aside > div {
+        margin-top: 20px;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    main h1 {
+        font-size: 25px;
+    }
+}

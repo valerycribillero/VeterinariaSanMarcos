@@ -138,7 +138,7 @@ if (!usuarioEditar) {
         }
 
         localStorage.setItem("usuarios", JSON.stringify(usuarios));
-        localStorage.removeItem("usuarioEditarAd.js");
+        localStorage.removeItem("usuarioEditar");
 
         alert("Usuario actualizado correctamente.");
         window.location.href = "usuariosAd.html";

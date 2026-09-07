@@ -6,14 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Usuarios | Veterinaria San Marcos</title>
+    <title>Mensajes | Veterinaria San Marcos</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
         rel="stylesheet">
 
     <!-- CSS de esta página -->
-    <link rel="stylesheet" href="usuarios.css">
+    <link rel="stylesheet" href="mensajes.css">
 
     <!-- CSS común del menú -->
     <link rel="stylesheet" href="menuAd.css">
@@ -58,7 +58,7 @@
             </li>
 
             <li>
-                <a href="usuariosAd.html" class="active">
+                <a href="usuariosAd.html">
                     Usuarios
                 </a>
             </li>
@@ -70,7 +70,7 @@
             </li>
 
             <li>
-                <a href="mensajesAd.html">
+                <a href="mensajesAd.html" class="active">
                     Mensajes
                 </a>
             </li>
@@ -115,23 +115,19 @@
             <div>
 
                 <h1 class="h3 mb-1">
-                    Usuarios
+                    Mensajes de contacto
                 </h1>
 
                 <p class="text-muted mb-0">
-                    Listado de usuarios registrados en el sistema.
+                    Mensajes enviados desde el formulario de contacto.
                 </p>
 
             </div>
 
-            <a href="crearUsuarioAd.html" class="btn btn-dark">
-                Nuevo usuario
-            </a>
-
         </div>
 
 
-        <!-- Tabla de usuarios -->
+        <!-- Tabla de mensajes -->
         <div class="card shadow-sm border-0">
 
             <div class="card-body">
@@ -145,15 +141,7 @@
                             <tr>
 
                                 <th>
-                                    RUN
-                                </th>
-
-                                <th>
                                     Nombre
-                                </th>
-
-                                <th>
-                                    Apellidos
                                 </th>
 
                                 <th>
@@ -161,7 +149,7 @@
                                 </th>
 
                                 <th>
-                                    Perfil
+                                    Mensaje
                                 </th>
 
                                 <th>
@@ -172,8 +160,7 @@
 
                         </thead>
 
-                        <!-- usuariosAd.js carga las filas aquí -->
-                        <tbody id="tablaUsuarios">
+                        <tbody id="tablaMensajes">
                         </tbody>
 
                     </table>
@@ -191,7 +178,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- JavaScript -->
-    <script src="usuariosAd.js"></script>
+    <script src="mensajesAd.js"></script>
 
 </body>
 

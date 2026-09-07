@@ -1,0 +1,226 @@
+
+/* =========================
+   ESTILO GENERAL
+========================= */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa !important;
+    color: #333;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   MENÚ LATERAL
+========================= */
+
+aside {
+    width: 250px !important;
+    min-height: 100vh;
+    background-color: white !important;
+    border-right: 1px solid #ddd !important;
+}
+
+
+/* Logo */
+
+aside > a {
+    color: #063d2f !important;
+}
+
+aside > a span {
+    color: #063d2f !important;
+}
+
+
+/* Texto Administración */
+
+aside > p {
+    color: #777 !important;
+}
+
+
+/* =========================
+   ENLACES DEL MENÚ
+========================= */
+
+aside .nav-link {
+    color: #333 !important;
+    background-color: transparent !important;
+    border-radius: 6px !important;
+}
+
+
+/* Hover */
+
+aside .nav-link:hover {
+    background-color: #063d2f !important;
+    color: white !important;
+}
+
+
+/* Elemento activo */
+
+aside .nav-pills .nav-link.active {
+    background-color: #063d2f !important;
+    color: white !important;
+    font-weight: bold;
+}
+
+
+/* Cerrar sesión */
+
+aside .text-danger {
+    color: #dc3545 !important;
+}
+
+
+/* =========================
+   CONTENIDO PRINCIPAL
+========================= */
+
+main {
+    padding: 35px !important;
+}
+
+
+/* Título */
+
+main h1 {
+    color: #063d2f !important;
+    font-size: 30px;
+}
+
+
+/* Descripción */
+
+main > div:first-child p {
+    color: #063d2f !important;
+}
+
+
+/* =========================
+   TARJETA
+========================= */
+
+.card {
+    border: none !important;
+    border-radius: 10px !important;
+    background-color: white !important;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
+
+.card-body {
+    padding: 25px !important;
+}
+
+
+/* =========================
+   TABLA
+========================= */
+
+.table {
+    margin-bottom: 0;
+}
+
+
+/* Encabezados */
+
+.table th {
+    color: #063d2f !important;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+/* Texto de las celdas */
+
+.table td {
+    color: #555;
+}
+
+
+/* Hover de las filas */
+
+.table-hover tbody tr:hover {
+    background-color: #f8f8f8;
+}
+
+
+/* =========================
+   BOTÓN ELIMINAR
+========================= */
+
+.btn-danger {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+    color: white !important;
+
+    padding: 6px 12px !important;
+    border-radius: 6px !important;
+}
+
+
+/* Hover */
+
+.btn-danger:hover {
+    background-color: #063d2f !important;
+    border-color: #063d2f !important;
+    color: white !important;
+}
+
+
+/* =========================
+   MENSAJE SIN REGISTROS
+========================= */
+
+.table td.text-muted {
+    color: #777 !important;
+    padding: 25px !important;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    body {
+        display: block !important;
+    }
+
+
+    aside {
+        width: 100% !important;
+        min-height: auto !important;
+    }
+
+
+    main {
+        padding: 20px !important;
+    }
+
+
+    main h1 {
+        font-size: 25px;
+    }
+
+
+    .table {
+        font-size: 14px;
+    }
+
+
+    .table td,
+    .table th {
+        padding: 10px 8px;
+    }
+
+}
+

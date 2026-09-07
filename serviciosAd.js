@@ -312,10 +312,12 @@ let servicios = [
     }
 ];
 
-//Tabla de servicios
+// Tabla de servicios
+
 let tabla = document.getElementById("tablaServicios");
 
 for (let i = 0; i < servicios.length; i++) {
+
     tabla.innerHTML += `
         <tr>
             <td>${servicios[i].codigo}</td>
@@ -325,16 +327,65 @@ for (let i = 0; i < servicios.length; i++) {
             <td>${servicios[i].duracion}</td>
             <td>$${servicios[i].precio}</td>
             <td>${servicios[i].observaciones}</td>
+
             <td>
-                <button class="btn btn-warning btn-sm"
-                        onclick="editarServicio(${servicios[i].id})">
+                <button
+                    class="btn btn-editar btn-sm"
+                    onclick="editarServicio(${servicios[i].id})">
+
                     Editar
+
                 </button>
             </td>
         </tr>
     `;
 }
-//Editar servicios
+
+
+// =========================
+// EDITAR SERVICIO
+// =========================
+
 function editarServicio(id) {
+
     console.log("El id del servicio es: " + id);
+
+
+    // Buscar el servicio seleccionado
+
+    let servicioSeleccionado = null;
+
+    for (let i = 0; i < servicios.length; i++) {
+
+        if (servicios[i].id === id) {
+
+            servicioSeleccionado = servicios[i];
+
+            break;
+        }
+    }
+
+
+    // Comprobar que existe
+
+    if (!servicioSeleccionado) {
+
+        alert("No se encontró el servicio.");
+
+        return;
+    }
+
+
+    // Guardar temporalmente el servicio
+
+    localStorage.setItem(
+        "servicioEditar",
+        JSON.stringify(servicioSeleccionado)
+    );
+
+
+    // Ir a la página de edición
+
+    window.location.href = "editarServicioAd.html";
 }
+
