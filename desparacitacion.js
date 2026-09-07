@@ -9,7 +9,7 @@ let desparacitacion = [
     {
         codigo: "DE002",
         nombre: "Desparasitación interna medianos (10-25 kg)",
-        precio: 95000,
+        precio: 9500,
         especie: "Perro",
         duracion_aprox: "5 minutos"
     },
@@ -36,7 +36,7 @@ let desparacitacion = [
     }
 ];
 
-let lista = document.getElementById("listaDesparasitacion");
+let lista = document.getElementById("listaDesparacitaciones");
 for (let i = 0; i < desparacitacion.length; i++){
     lista.innerHTML += `
         <div>
