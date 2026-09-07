@@ -61,6 +61,7 @@ body {
 .inicio .btn-primary {
     background-color: #d99b43;
     border-color: #d99b43;
+    
 }
 
 .inicio .btn-secondary {
@@ -74,9 +75,14 @@ body {
     border-color: #bd8131;
 }
 
+.inicio .btn-primary:hover {
+    background-color: white;
+    color: white;
+}
+
 .inicio .btn-secondary:hover {
     background-color: white;
-    color: #063d2f;
+    color: white;
 }
 
 .card {
@@ -84,8 +90,13 @@ body {
     margin: 40px auto;
     border: none;
     border-radius: 10px;
-
+    text-align: center;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+.card .btn-primary{
+    background-color: #bd8131;
+    border-color: #bd8131;
+
 }
 
 .card-body {

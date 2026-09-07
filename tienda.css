@@ -70,103 +70,52 @@ h1::after {
     border-radius: 10px;
 }
 
-
-/* =========================
-   LISTA DE PRODUCTOS
-========================= */
-
 #listaProductos {
     max-width: 1000px;
-
     margin: 0 auto;
-
     padding: 0 20px 50px;
-
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 25px;
 }
 
-
-/* =========================
-   TARJETAS
-========================= */
-
-/*
-   Esta parte funciona si productos.js
-   genera elementos con la clase .producto
-*/
-
 .producto {
     background-color: white;
-
     border-radius: 12px;
-
     padding: 25px;
-
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-
-/* Efecto al pasar el mouse */
-
 .producto:hover {
     transform: translateY(-5px);
-
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-
-/* Nombre del producto */
-
 .producto h2 {
     color: #063d2f;
-
     font-size: 20px;
-
     margin-bottom: 12px;
 }
 
-
-/* Precio */
-
 .producto p {
     color: #555;
-
     font-size: 14px;
 }
 
-
-/* Precio destacado */
-
 .producto .precio {
     color: #d99b43;
-
     font-size: 20px;
-
     font-weight: bold;
 }
 
-
-/* Botón */
-
 .producto button {
     background-color: #063d2f;
-
     color: white;
-
     border: none;
-
     border-radius: 6px;
-
     padding: 9px 18px;
-
     cursor: pointer;
-
     transition: 0.2s;
 }
 
@@ -174,33 +123,21 @@ h1::after {
     background-color: #d99b43;
 }
 
-
-/* =========================
-   SI TUS PRODUCTOS USAN
-   .card DE BOOTSTRAP
-========================= */
-
 #listaProductos .card {
     border: none;
-
     border-radius: 12px;
-
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-
     transition: transform 0.2s, box-shadow 0.2s;
-
     overflow: hidden;
 }
 
 #listaProductos .card:hover {
     transform: translateY(-5px);
-
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 #listaProductos .card-title {
     color: #063d2f;
-
     font-weight: bold;
 }
 
@@ -210,20 +147,13 @@ h1::after {
 
 #listaProductos .btn-primary {
     background-color: #063d2f;
-
     border-color: #063d2f;
 }
 
 #listaProductos .btn-primary:hover {
     background-color: #d99b43;
-
     border-color: #d99b43;
 }
-
-
-/* =========================
-   CELULAR
-========================= */
 
 @media (max-width: 768px) {
 
@@ -241,11 +171,9 @@ h1::after {
 
 
 @media (max-width: 500px) {
-
     #listaProductos {
         grid-template-columns: 1fr;
     }
-
     h1 {
         font-size: 28px !important;
     }
