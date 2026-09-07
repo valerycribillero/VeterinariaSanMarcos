@@ -41,8 +41,23 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     isValid = false;
   }
 
-  if (isValid) {
+if (isValid) {
+
+    const mensaje = {
+        nombre: nombre,
+        correo: correo,
+        comentario: comentario
+    };
+
+    let mensajes = JSON.parse(localStorage.getItem('mensajesContacto')) || [];
+
+    mensajes.push(mensaje);
+
+    localStorage.setItem('mensajesContacto', JSON.stringify(mensajes));
+
     alert('¡Mensaje enviado con éxito!');
+
     this.reset();
-  }
+}
 });
+
