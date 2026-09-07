@@ -4,244 +4,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Nosotros - Veterinaria San Marcos</title>
 
-    <!-- bootstrap -->
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos Personalizados -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
+    <!-- HEADER EXACTO SOLICITADO -->
     <header>
         <nav class="navbar navbar-expand-lg bg-white shadow-sm">
-
             <div class="container">
-
-                <a class="navbar-brand d-flex align-items-center" href="index.html">
-
+                <a class="navbar-brand d-flex align-items-center" href="veterinaria.html">
                     <img src="img/logo.png"
-                         alt="Veterinaria San Marcos"
-                         width="45"
-                         height="45"
-                         class="me-2">
+                        alt="Logo"
+                        width="45"
+                        height="45"
+                        class="me-2">
 
-                    <span class="fw-bold">
-                        Veterinaria San Marcos
-                    </span>
-
+                    <span class="fw-bold" href="veterinaria.html">Veterinaria san Marcos</span>
                 </a>
 
+                <!-- para que se pueda ver bien en celu -->
                 <button class="navbar-toggler"
                         type="button"
                         data-bs-toggle="collapse"
-                        data-bs-target="#menuNavegacion"
-                        aria-controls="menuNavegacion"
-                        aria-expanded="false"
-                        aria-label="Mostrar menú">
-
+                        data-bs-target="#menuPrincipal">
                     <span class="navbar-toggler-icon"></span>
-
                 </button>
 
-                <div class="collapse navbar-collapse" id="menuNavegacion">
-
+                <!-- menu -->
+                <div class="collapse navbar-collapse" id="menuPrincipal">
                     <ul class="navbar-nav mx-auto">
-
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">
-                                Inicio
-                            </a>
+                            <a class="nav-link" href="servicios.html">Servicios</a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link" href="servicios.html">
-                                Servicios
-                            </a>
+                            <a class="nav-link active" aria-current="page" href="nosotros.html">Equipo</a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link active"
-                               aria-current="page"
-                               href="nosotros.html">
-                                Nosotros
-                            </a>
+                            <a class="nav-link" href="contacto.html">Contacto</a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link" href="blogs.html">
-                                Blogs
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">
-                                Contacto
-                            </a>
+                            <a class="nav-link" href="blogs.html">Blog</a>
                         </li>
 
                     </ul>
 
-                    <div class="d-flex align-items-center mt-3 mt-lg-0">
-
-                        <a href="cita.html"
-                           class="btn btn-primary">
-                            Pedir cita
-                        </a>
-
-                        <a href="login.html"
-                           class="btn btn-primary ms-2">
-                            Login
-                        </a>
-
-                    </div>
-
+                    <!-- Botón Login -->
+                    <a href="login.html" class="btn btn-primary" style="background-color: #d99b43; border-color: #d99b43;">
+                        Iniciar sesión
+                    </a>
+                    <a href="cita.html" class="btn btn-primary ms-2" style="background-color: #d99b43; border-color: #d99b43;">
+                        Reservar cita
+                    </a>
+                    <a href="carrito.html" class="btn btn-carrito ms-2">
+                        🛒
+                        <span id="contadorCarrito"></span>
+                    </a>
                 </div>
-
             </div>
-
         </nav>
     </header>
 
+    <!-- BANNER HERO -->
+    <section class="bg-white py-5 border-bottom">
+        <div class="container text-center">
+            <h1 class="display-5 fw-bold mb-3" style="color: #063d2f;">Conoce Nuestra Historia</h1>
+            <p class="lead text-muted mx-auto" style="max-width: 700px;">
+                Desde 2009 brindando atención profesional, cálida y de alta calidad para garantizar el bienestar de tus compañeros de vida.
+            </p>
+        </div>
+    </section>
 
-    <main>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container my-5">
+        <div class="row g-4">
 
-        <section class="nosotros-section">
-
-
-            <div class="text-center mb-5">
-
-                <h1 class="page-title">
-                    Nosotros
-                </h1>
-
-                <p class="text-muted">
-                    Conoce más sobre Veterinaria San Marcos y nuestro compromiso
-                    con el bienestar de tus mascotas.
-                </p>
-
+            <!-- QUIÉNES SOMOS -->
+            <div class="col-lg-6">
+                <article class="nosotros-card h-100 p-4 bg-white rounded-3 shadow-sm border-0">
+                    <h2 class="h3 fw-bold mb-3" style="color: #063d2f;">¿Quiénes somos?</h2>
+                    <img src="img/equipo.jpg" class="img-fluid rounded mb-3 w-100" style="height: 250px; object-fit: cover;" alt="Equipo Veterinaria San Marcos">
+                    <p class="text-secondary">
+                        Veterinaria San Marcos es un centro dedicado al cuidado integral y bienestar de las mascotas. Nuestro objetivo es entregar una atención médica responsable, humana y oportuna.
+                    </p>
+                    <p class="text-secondary mb-0">
+                        Contamos con un equipo altamente capacitado y comprometido con la salud animal y la tranquilidad de sus familias.
+                    </p>
+                </article>
             </div>
 
+            <!-- NUESTRA MISIÓN -->
+            <div class="col-lg-6">
+                <article class="nosotros-card h-100 p-4 bg-white rounded-3 shadow-sm border-0">
+                    <h2 class="h3 fw-bold mb-3" style="color: #063d2f;">Nuestra Misión</h2>
+                    <img src="img/mision.jpg" class="img-fluid rounded mb-3 w-100" style="height: 250px; object-fit: cover;" alt="Misión Veterinaria San Marcos">
+                    <p class="text-secondary">
+                        Brindar servicios veterinarios de excelencia orientados a la prevención, tratamiento y cuidado responsable para mejorar la calidad de vida de las mascotas.
+                    </p>
+                    <p class="text-secondary mb-0">
+                        Orientamos constantemente a sus tutores para que tomen las mejores decisiones en cada etapa de la vida de su compañero.
+                    </p>
+                </article>
+            </div>
 
-            <article class="nosotros-card">
+            <!-- NUESTRO COMPROMISO -->
+            <div class="col-lg-8">
+                <article class="nosotros-card p-4 bg-white rounded-3 shadow-sm border-0">
+                    <h2 class="h3 fw-bold mb-3" style="color: #063d2f;">Nuestro Compromiso</h2>
+                    <div class="row align-items-center">
+                        <div class="col-md-5 mb-3 mb-md-0">
+                            <img src="img/compromiso.jpg" class="img-fluid rounded w-100" style="height: 200px; object-fit: cover;" alt="Compromiso San Marcos">
+                        </div>
+                        <div class="col-md-7">
+                            <p class="text-secondary">
+                                Trabajamos día a día basados en la ética, la empatía y la constante actualización médica. Nos esforzamos por ofrecer un espacio seguro y acogedor tanto para los pacientes como para sus familias.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
 
-                <h2>
-                    ¿Quiénes somos?
-                </h2>
-
-                <img src="img/equipo.jpg"
-                     class="nosotros-image"
-                     alt="Equipo de Veterinaria San Marcos">
-
-                <p>
-                    Veterinaria San Marcos es un centro dedicado al cuidado y
-                    bienestar de las mascotas. Nuestro objetivo es entregar una
-                    atención responsable, cercana y de calidad, buscando que cada
-                    paciente reciba los cuidados que necesita.
-                </p>
-
-                <p>
-                    Contamos con un equipo comprometido con la salud de los
-                    animales y con la tranquilidad de sus familias.
-                </p>
-
-            </article>
-
-
-            <article class="nosotros-card">
-
-                <h2>
-                    Nuestra misión
-                </h2>
-
-                <img src="img/mision.jpg"
-                     class="nosotros-image"
-                     alt="Misión de Veterinaria San Marcos">
-
-                <p>
-                    Brindar atención veterinaria de calidad, promoviendo la
-                    prevención, el cuidado responsable y una buena calidad de
-                    vida para nuestras mascotas.
-                </p>
-
-                <p>
-                    Buscamos entregar orientación a los dueños para que puedan
-                    cuidar de mejor manera a sus animales en cada etapa de su vida.
-                </p>
-
-            </article>
-
-
-            <article class="nosotros-card">
-
-                <h2>
-                    Nuestro compromiso
-                </h2>
-
-                <img src="img/compromiso.jpg"
-                     class="nosotros-image"
-                     alt="Compromiso de Veterinaria San Marcos">
-
-                <p>
-                    Nos comprometemos a entregar una atención basada en el respeto,
-                    la responsabilidad y el cuidado de cada paciente.
-                </p>
-
-                <p>
-                    Para nosotros, las mascotas son parte importante de cada
-                    familia, por lo que trabajamos para proporcionarles una
-                    atención veterinaria adecuada y un ambiente seguro.
-                </p>
-
-            </article>
-
-
-            <article class="nosotros-card">
-
-                <h2>
-                    Atención veterinaria
-                </h2>
-
-                <p>
-                    En Veterinaria San Marcos ofrecemos diferentes servicios
-                    orientados a la prevención y cuidado de la salud de las
-                    mascotas, entre ellos:
-                </p>
-
-                <ul>
-                    <li>Consultas veterinarias.</li>
-                    <li>Vacunación.</li>
-                    <li>Desparasitación.</li>
-                    <li>Control de peso.</li>
-                    <li>Cirugías menores.</li>
-                </ul>
-
-            </article>
-
-        </section>
-
-    </main>
-
-    <footer class="bg-light py-4 border-top">
-
-        <div class="container text-center text-muted">
-
-            <p class="mb-1">
-                © 2026 Veterinaria San Marcos
-            </p>
-
-            <p class="mb-0">
-                Cuidando a tus mascotas con amor y dedicación.
-            </p>
+            <!-- SERVICIOS DESTACADOS -->
+            <div class="col-lg-4">
+                <article class="nosotros-card h-100 p-4 bg-white rounded-3 shadow-sm border-0">
+                    <h2 class="h3 fw-bold mb-3" style="color: #063d2f;">Servicios Médicos</h2>
+                    <ul class="list-unstyled text-secondary lh-lg mb-0">
+                        <li>✔️ Consultas Clínicas Preventivas</li>
+                        <li>✔️ Programa Completo de Vacunación</li>
+                        <li>✔️ Desparasitación Interna y Externa</li>
+                        <li>✔️ Control Nutricional y Peso</li>
+                        <li>✔️ Procedimientos y Cirugías Menores</li>
+                    </ul>
+                </article>
+            </div>
 
         </div>
+    </main>
 
+    <!-- FOOTER MULTICOLUMNA -->
+    <footer class="footer">
+        <div class="container py-4">
+            <div class="footer-contenido row g-4">
+                <div class="footer-columna col-md-4">
+                    <h3 class="fw-bold">Veterinaria San Marcos</h3>
+                    <p>
+                        Cuidando la salud de tus mascotas
+                        desde 2009 en Rancagua.
+                    </p>
+                </div>
+                <div class="footer-columna col-md-4">
+                    <h3 class="fw-bold">Horario</h3>
+                    <p>
+                        Lunes - Viernes: 13:30 - 19:30
+                        <br>
+                        Sábados: 9:00 - 13:00
+                        <br>
+                        Domingo: Cerrado
+                    </p>
+                </div>
+                <div class="footer-columna col-md-4">
+                    <h3 class="fw-bold">Contacto</h3>
+                    <p>
+                        📍 Av. Brasil 2140, Rancagua
+                        <br>
+                        📞 +56 9 1234 5678
+                        <br>
+                        ✉️ contacto@veterinariasanmarcos.cl
+                    </p>
+                </div>
+            </div>
+            <hr class="my-3 text-muted">
+            <div class="footer-abajo text-center text-muted">
+                © 2026 Veterinaria San Marcos. Todos los derechos reservados.
+            </div>
+        </div>
     </footer>
 
-
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+    <!-- JS Integración con LocalStorage -->
+    <script src="app-integration.js"></script>
 </body>
 
 </html>

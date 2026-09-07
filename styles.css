@@ -1,5 +1,7 @@
 /* =========================================================
-   general
+   GENERAL Y PALETA DE COLORES
+   Verde Oscuro: #063d2f
+   Dorado: #d99b43
    ========================================================= */
 
 * {
@@ -15,18 +17,16 @@ body {
     min-height: 100vh;
 }
 
-
 /* =========================================================
-   navbar
+   NAVBAR (HEADER Y ENLACES)
    ========================================================= */
 
 .navbar {
     background-color: #ffffff !important;
-    border-bottom: 1px solid #e4e4e4;
 }
 
 .navbar-brand {
-    color: #245c4a !important;
+    color: #063d2f !important;
     font-size: 1.1rem;
 }
 
@@ -44,23 +44,19 @@ body {
     transition: all 0.3s ease;
 }
 
-.nav-link:hover {
-    color: #245c4a !important;
-}
-
 .nav-link.active {
-    color: #245c4a !important;
+    color: #063d2f !important;
     font-weight: bold;
 }
 
-
 /* =========================================================
-   botones
+   BOTONES Y ELEMENTOS DESTACADOS
    ========================================================= */
 
+/* Botones principales en Dorado */
 .btn-primary {
-    background-color: #245c4a !important;
-    border-color: #245c4a !important;
+    background-color: #d99b43 !important;
+    border-color: #d99b43 !important;
     color: #ffffff !important;
     border-radius: 8px;
     padding: 10px 20px;
@@ -68,10 +64,23 @@ body {
     transition: all 0.3s ease;
 }
 
-.btn-primary:hover {
-    background-color: #1b493b !important;
-    border-color: #1b493b !important;
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #b88032 !important;
+    border-color: #b88032 !important;
+    color: #ffffff !important;
     transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(217, 155, 67, 0.3);
+}
+
+.btn-outline-primary {
+    color: #d99b43 !important;
+    border-color: #d99b43 !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: #d99b43 !important;
+    color: #ffffff !important;
 }
 
 .btn-secondary {
@@ -80,18 +89,34 @@ body {
     border-radius: 8px;
 }
 
+/* Badges e Insignias */
+.badge.bg-success, 
+.badge.bg-primary {
+    background-color: #063d2f !important;
+}
 
 /* =========================================================
-   titulos general
+   TITULOS Y ENCABEZADOS (VERDE OSCURO)
    ========================================================= */
+
+h1, h2, h3, h4, h5, h6 {
+    color: #063d2f;
+}
 
 .page-title {
     text-align: center;
-    color: #245c4a;
+    color: #063d2f;
     font-weight: bold;
     margin: 40px 0;
 }
 
+.text-success {
+    color: #063d2f !important;
+}
+
+.text-gold {
+    color: #d99b43 !important;
+}
 
 /* =========================================================
    BLOGS
@@ -107,52 +132,37 @@ body {
     display: flex;
     align-items: center;
     gap: 25px;
-
     background-color: #ffffff;
-
     padding: 25px;
     margin-bottom: 25px;
-
     border-radius: 15px;
-
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-
-    transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
+    border-left: 5px solid #063d2f;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .blog-card:hover {
     transform: translateY(-3px);
-
     box-shadow: 0 7px 20px rgba(0, 0, 0, 0.12);
+    border-left-color: #d99b43;
 }
-
-
-/* img card de blogs */
 
 .blog-card img,
 .blog-image {
     width: 300px;
     height: 200px;
-
     object-fit: cover;
-
     display: block;
-
     border-radius: 10px;
-
     flex-shrink: 0;
 }
-
-
-/* contenido card */
 
 .blog-content {
     flex: 1;
 }
 
 .blog-content h2 {
-    color: #245c4a;
+    color: #063d2f;
     font-size: 1.5rem;
     margin-bottom: 15px;
 }
@@ -163,68 +173,43 @@ body {
     margin-bottom: 20px;
 }
 
-
 /* =========================================================
-   detalle blog 1 y 2
+   DETALLE DE BLOG
    ========================================================= */
 
 .blog-detail-container {
     max-width: 900px;
-
     margin: 50px auto;
-
     padding: 0 20px;
 }
 
 .blog-detail {
     background-color: #ffffff;
-
     padding: 40px;
-
     border-radius: 15px;
-
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
-
-/* titulo blog */
-
 .blog-detail h1 {
-    color: #245c4a;
-
+    color: #063d2f;
     text-align: center;
-
     font-size: 2rem;
-
     line-height: 1.3;
-
     margin-bottom: 30px;
 }
-
-
-/* img de los blogs12 */
 
 .blog-detail-image {
     width: 600px;
     height: 350px;
-
     object-fit: cover;
-
     display: block;
-
     margin: 0 auto 30px;
-
     border-radius: 10px;
 }
 
-
-/* texto blog */
-
 .blog-detail-text {
     color: #555;
-
     font-size: 1rem;
-
     line-height: 1.8;
 }
 
@@ -232,49 +217,37 @@ body {
     margin-bottom: 20px;
 }
 
-
-/* boton volver */
-
 .blog-detail-button {
     text-align: center;
-
     margin-top: 30px;
 }
 
-
 /* =========================================================
-   nosotros
+   NOSOTROS
    ========================================================= */
 
 .nosotros-section {
     max-width: 1000px;
-
     margin: 50px auto;
-
     padding: 0 20px;
 }
 
 .nosotros-card {
     background-color: #ffffff;
-
     padding: 30px;
-
     margin-bottom: 25px;
-
     border-radius: 15px;
-
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-top: 4px solid #063d2f;
 }
 
 .nosotros-card h2 {
-    color: #245c4a;
-
+    color: #063d2f;
     margin-bottom: 15px;
 }
 
 .nosotros-card p {
     color: #555;
-
     line-height: 1.7;
 }
 
@@ -288,26 +261,20 @@ body {
     border-radius: 10px;
 }
 
-
 /* =========================================================
-   contacto
+   CONTACTO Y FORMULARIOS
    ========================================================= */
 
 .contact-container {
     max-width: 800px;
-
     margin: 50px auto;
-
     padding: 0 20px;
 }
 
 .contact-form {
     background-color: #ffffff;
-
     padding: 35px;
-
     border-radius: 15px;
-
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
@@ -317,210 +284,163 @@ body {
 
 .form-group label {
     display: block;
-
     margin-bottom: 8px;
-
     font-weight: 600;
-
-    color: #333;
+    color: #063d2f;
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-control {
     width: 100%;
-
     padding: 12px;
-
     border: 1px solid #ccc;
-
     border-radius: 8px;
-
     font-family: Arial, Helvetica, sans-serif;
-
     font-size: 1rem;
-
-    transition: border-color 0.3s ease,
-                box-shadow 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-control:focus {
     outline: none;
-
-    border-color: #245c4a;
-
-    box-shadow: 0 0 0 3px rgba(36, 92, 74, 0.1);
+    border-color: #d99b43 !important;
+    box-shadow: 0 0 0 3px rgba(217, 155, 67, 0.25) !important;
 }
 
 .form-group textarea {
     min-height: 150px;
-
     resize: vertical;
 }
-
-
 
 .error,
 .error-message {
     color: #dc3545;
-
     font-size: 0.85rem;
-
     margin-top: 5px;
-
     display: block;
 }
 
-
-
 .success-message {
-    color: #198754;
-
+    color: #063d2f;
     font-size: 0.9rem;
-
     margin-top: 10px;
 }
 
-
 /* =========================================================
-   footer
+   FOOTER
    ========================================================= */
 
-footer {
-    margin-top: 50px;
-
-    background-color: #ffffff !important;
-
-    border-top: 1px solid #e4e4e4;
+.footer {
+    background-color: #063d2f;
+    color: white;
+    padding: 35px 20px 15px;
+    margin-top: 40px;
 }
 
-footer p {
-    color: #777;
-
-    font-size: 0.9rem;
+.footer-contenido {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
 }
 
+.footer-columna {
+    flex: 1;
+}
+
+.footer-columna h3 {
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-columna p {
+    font-size: 10px;
+    line-height: 1.7;
+    color: #c5d9d3;
+    margin: 0;
+}
+
+.footer-abajo {
+    max-width: 900px;
+    margin: 20px auto 0;
+    padding-top: 15px;
+    border-top: 1px solid #1c5949;
+    text-align: center;
+    font-size: 9px;
+    color: #8fb2a8;
+}.footer {
+    background-color: #063d2f;
+    color: white;
+    padding: 35px 20px 15px;
+    margin-top: 40px;
+}
+
+.footer-contenido {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-columna {
+    flex: 1;
+}
+
+.footer-columna h3 {
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-columna p {
+    font-size: 10px;
+    line-height: 1.7;
+    color: #c5d9d3;
+    margin: 0;
+}
+
+.footer-abajo {
+    max-width: 900px;
+    margin: 20px auto 0;
+    padding-top: 15px;
+    border-top: 1px solid #1c5949;
+    text-align: center;
+    font-size: 9px;
+    color: #8fb2a8;
+}
 
 /* =========================================================
-   tablet
+   RESPONSIVE DESIGN (TABLET Y MÓVIL)
    ========================================================= */
 
 @media (max-width: 991px) {
-
-    .navbar-nav {
-        gap: 0;
-    }
-
-    .blog-card {
-        gap: 20px;
-    }
-
-    .blog-card img,
-    .blog-image {
-        width: 260px;
-        height: 180px;
-    }
-
+    .navbar-nav { gap: 0; }
+    .blog-card { gap: 20px; }
+    .blog-card img, .blog-image { width: 260px; height: 180px; }
 }
-
-
-/* =========================================================
-   celu
-   ========================================================= */
 
 @media (max-width: 768px) {
-
-
-    .blog-container {
-        margin: 30px auto;
-    }
-
-    .blog-card {
-        flex-direction: column;
-
-        align-items: stretch;
-
-        padding: 20px;
-    }
-
-    .blog-card img,
-    .blog-image {
-        width: 100%;
-        height: 220px;
-    }
-
-    .blog-content h2 {
-        font-size: 1.3rem;
-    }
-
-
-    .blog-detail-container {
-        margin: 30px auto;
-    }
-
-    .blog-detail {
-        padding: 25px;
-    }
-
-    .blog-detail h1 {
-        font-size: 1.7rem;
-    }
-
-    .blog-detail-image {
-        width: 100%;
-        height: 250px;
-    }
-
-
-    .contact-container {
-        margin: 30px auto;
-    }
-
-    .contact-form {
-        padding: 25px;
-    }
-
-
-    .nosotros-section {
-        margin: 30px auto;
-    }
-
+    .blog-container, .blog-detail-container, .contact-container, .nosotros-section { margin: 30px auto; }
+    .blog-card { flex-direction: column; align-items: stretch; padding: 20px; }
+    .blog-card img, .blog-image { width: 100%; height: 220px; }
+    .blog-content h2 { font-size: 1.3rem; }
+    .blog-detail { padding: 25px; }
+    .blog-detail h1 { font-size: 1.7rem; }
+    .blog-detail-image { width: 100%; height: 250px; }
+    .contact-form { padding: 25px; }
 }
 
-
-/* =========================================================
-   celu pequeño
-   ========================================================= */
-
 @media (max-width: 400px) {
-
-    .navbar-brand {
-        font-size: 0.95rem;
-    }
-
-    .blog-card img,
-    .blog-image {
-        height: 190px;
-    }
-
-    .blog-detail {
-        padding: 20px;
-    }
-
-    .blog-detail h1 {
-        font-size: 1.5rem;
-    }
-
-    .blog-detail-image {
-        height: 210px;
-    }
-
-    .contact-form {
-        padding: 20px;
-    }
-
-    .btn-primary {
-        padding: 9px 15px;
-    }
-
+    .navbar-brand { font-size: 0.95rem; }
+    .blog-card img, .blog-image { height: 190px; }
+    .blog-detail { padding: 20px; }
+    .blog-detail h1 { font-size: 1.5rem; }
+    .blog-detail-image { height: 210px; }
+    .contact-form { padding: 20px; }
+    .btn-primary { padding: 9px 15px; }
 }

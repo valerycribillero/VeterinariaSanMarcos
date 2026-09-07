@@ -1,48 +1,73 @@
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  let isValid = true;
+// ================================================
+// 1. FUNCIÓN DE INGRESO / LOGIN (Lógica solicitada)
+// ================================================
+function ingresar() {
+    let correo = document.getElementById("correo").value.trim();
+    let clave = document.getElementById("clave").value;
 
-  const nombre = document.getElementById('nombre').value.trim();
-  const correo = document.getElementById('correo').value.trim();
-  const comentario = document.getElementById('comentario').value.trim();
+    if (correo === "") {
+        alert("El correo es obligatorio.");
+    } else if (correo.length > 100) {
+        alert("El correo no puede superar los 100 caracteres.");
+    } else if (
+        !correo.endsWith("@duoc.cl") &&
+        !correo.endsWith("@profesor.duoc.cl") &&
+        !correo.endsWith("@gmail.com")
+    ) {
+        alert("El correo debe ser @duoc.cl, @profesor.duoc.cl o @gmail.com.");
+    } else if (clave === "") {
+        alert("La contraseña es obligatoria.");
+    } else if (clave.length < 4 || clave.length > 10) {
+        alert("La contraseña debe tener entre 4 y 10 caracteres.");
+    } else if (correo === "adri@gmail.com" && clave === "1234") {
+        window.location.href = "veterinaria.html"; // Redirige a pantalla de inicio
+    } else if (correo === "usuario@demo.cl" && clave === "5678") {
+        window.location.href = "usuario.html";
+    } else {
+        alert("Hubo un error al intentar ingresar.");
+    }
+}
 
-  const errNombre = document.getElementById('errNombre');
-  const errCorreo = document.getElementById('errCorreo');
-  const errComentario = document.getElementById('errComentario');
+// ================================================
+// 2. LÓGICA PARA EL FORMULARIO DE CONTACTO
+// ================================================
+document.addEventListener("DOMContentLoaded", function () {
+    const formularioContacto = document.getElementById("formContacto");
 
-  errNombre.textContent = '';
-  errCorreo.textContent = '';
-  errComentario.textContent = '';
+    if (formularioContacto) {
+        formularioContacto.addEventListener("submit", function (e) {
+            e.preventDefault();
 
-  if (!nombre) {
-    errNombre.textContent = 'El nombre es obligatorio.';
-    isValid = false;
-  } else if (nombre.length > 100) {
-    errNombre.textContent = 'Máximo 100 caracteres.';
-    isValid = false;
-  }
+            let nombre = document.getElementById("nombre") ? document.getElementById("nombre").value.trim() : "";
+            let correo = document.getElementById("correoContacto") ? document.getElementById("correoContacto").value.trim() : "";
+            let mensaje = document.getElementById("mensaje") ? document.getElementById("mensaje").value.trim() : "";
 
-  const allowedDomains = ['@duocuc.cl', '@profesor.duoc.cl', '@gmail.com'];
-  const domainValid = allowedDomains.some(domain => correo.endsWith(domain));
+            if (nombre === "") {
+                alert("Por favor, ingresa tu nombre.");
+                return;
+            }
 
-  if (!correo) {
-    errCorreo.textContent = 'El correo es obligatorio.';
-    isValid = false;
-  } else if (!domainValid) {
-    errCorreo.textContent = 'Solo se permiten correos @duoc.cl, @profesor.duoc.cl o @gmail.com.';
-    isValid = false;
-  }
+            if (correo === "") {
+                alert("El correo electrónico es obligatorio.");
+                return;
+            }
 
-  if (!comentario) {
-    errComentario.textContent = 'El comentario es obligatorio.';
-    isValid = false;
-  } else if (comentario.length > 500) {
-    errComentario.textContent = 'Máximo 500 caracteres.';
-    isValid = false;
-  }
+            if (
+                !correo.endsWith("@duoc.cl") &&
+                !correo.endsWith("@profesor.duoc.cl") &&
+                !correo.endsWith("@gmail.com")
+            ) {
+                alert("El correo debe ser @duoc.cl, @profesor.duoc.cl o @gmail.com.");
+                return;
+            }
 
-  if (isValid) {
-    alert('¡Mensaje enviado con éxito!');
-    this.reset();
-  }
+            if (mensaje === "") {
+                alert("Por favor, escribe un mensaje.");
+                return;
+            }
+
+            alert("¡Gracias por contactarnos, " + nombre + "! Hemos recibido tu mensaje correctamente.");
+            formularioContacto.reset();
+        });
+    }
 });
