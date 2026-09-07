@@ -116,17 +116,20 @@ main > div:first-child p {
     font-weight: bold;
 }
 
-.form-control,
-.form-select {
+.form-control {
     border: 1px solid #ddd !important;
     border-radius: 6px !important;
     padding: 10px !important;
 }
 
-.form-control:focus,
-.form-select:focus {
+.form-control:focus {
     border-color: #d99b43 !important;
     box-shadow: 0 0 0 0.15rem rgba(217, 155, 67, 0.25) !important;
+}
+
+.form-control[readonly] {
+    background-color: #f8f9fa !important;
+    color: #777 !important;
 }
 
 
@@ -167,6 +170,15 @@ main > div:first-child p {
 
 
 /* =========================
+   MENSAJE
+========================= */
+
+#mensajeExito {
+    max-width: 100%;
+}
+
+
+/* =========================
    RESPONSIVE
 ========================= */
 
@@ -194,7 +206,6 @@ main > div:first-child p {
     }
 
     .botones {
-        display: flex;
         flex-wrap: wrap;
     }
 }

@@ -81,17 +81,6 @@ main > div:first-child p {
 
 
 /* =========================
-   ENCABEZADO
-========================= */
-
-.encabezado {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-/* =========================
    TARJETA
 ========================= */
 
@@ -131,15 +120,10 @@ main > div:first-child p {
 
 
 /* =========================
-   BOTONES
+   BOTÓN GUARDAR
 ========================= */
 
-.botones {
-    display: flex;
-    gap: 10px;
-}
-
-.btn-guardar {
+form .btn-primary {
     background-color: #d99b43 !important;
     border-color: #d99b43 !important;
     color: white !important;
@@ -147,12 +131,17 @@ main > div:first-child p {
     border-radius: 6px !important;
 }
 
-.btn-guardar:hover {
+form .btn-primary:hover {
     background-color: #063d2f !important;
     border-color: #063d2f !important;
 }
 
-.btn-cancelar {
+
+/* =========================
+   BOTÓN CANCELAR
+========================= */
+
+form .btn-secondary {
     background-color: #777 !important;
     border-color: #777 !important;
     color: white !important;
@@ -160,7 +149,7 @@ main > div:first-child p {
     border-radius: 6px !important;
 }
 
-.btn-cancelar:hover {
+form .btn-secondary:hover {
     background-color: #063d2f !important;
     border-color: #063d2f !important;
 }
@@ -171,7 +160,6 @@ main > div:first-child p {
 ========================= */
 
 @media (max-width: 768px) {
-
     body {
         display: block !important;
     }
@@ -187,15 +175,6 @@ main > div:first-child p {
 
     main h1 {
         font-size: 25px;
-    }
-
-    .encabezado {
-        display: block;
-    }
-
-    .botones {
-        display: flex;
-        flex-wrap: wrap;
     }
 }
 

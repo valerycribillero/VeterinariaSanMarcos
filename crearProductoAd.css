@@ -75,19 +75,8 @@ main h1 {
     font-size: 30px;
 }
 
-main > div:first-child p {
+main p {
     color: #063d2f !important;
-}
-
-
-/* =========================
-   ENCABEZADO
-========================= */
-
-.encabezado {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 
@@ -136,6 +125,7 @@ main > div:first-child p {
 
 .botones {
     display: flex;
+    justify-content: flex-end;
     gap: 10px;
 }
 
@@ -143,26 +133,28 @@ main > div:first-child p {
     background-color: #d99b43 !important;
     border-color: #d99b43 !important;
     color: white !important;
-    padding: 8px 16px !important;
+    padding: 10px 18px !important;
     border-radius: 6px !important;
 }
 
 .btn-guardar:hover {
     background-color: #063d2f !important;
     border-color: #063d2f !important;
+    color: white !important;
 }
 
 .btn-cancelar {
     background-color: #777 !important;
     border-color: #777 !important;
     color: white !important;
-    padding: 8px 16px !important;
+    padding: 10px 18px !important;
     border-radius: 6px !important;
 }
 
 .btn-cancelar:hover {
     background-color: #063d2f !important;
     border-color: #063d2f !important;
+    color: white !important;
 }
 
 
@@ -189,13 +181,12 @@ main > div:first-child p {
         font-size: 25px;
     }
 
-    .encabezado {
-        display: block;
+    .botones {
+        justify-content: stretch;
     }
 
-    .botones {
-        display: flex;
-        flex-wrap: wrap;
+    .botones .btn {
+        flex: 1;
     }
 }
 

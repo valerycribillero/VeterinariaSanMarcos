@@ -62,19 +62,26 @@
                     Usuarios
                 </a>
             </li>
-
+            <li>
+                <a href="productoAd.css">
+                    Productos
+                </a>
+            </li>
             <li>
                 <a href="serviciosAd.html">
                     Servicios
                 </a>
             </li>
-
             <li>
                 <a href="mensajesAd.html">
                     Mensajes
                 </a>
             </li>
-
+            <li>
+                <a href="rolesAd.html">
+                    Roles
+                </a>
+            </li>
         </ul>
 
         <!-- Menú inferior -->
@@ -85,7 +92,7 @@
             <ul>
 
                 <li>
-                    <a href="perfil.html">
+                    <a href="perfilAdmin.html">
                         Mi perfil
                     </a>
                 </li>
@@ -99,80 +106,59 @@
             </ul>
 
         </div>
-
     </aside>
-
-
     <!-- =========================
-         CONTENIDO PRINCIPAL
-         ========================= -->
-
+        CONTENIDO PRINCIPAL
+        ========================= -->
     <main class="flex-grow-1 p-4">
-
         <!-- Encabezado -->
         <div class="mb-4">
-
             <h1 class="h3">
                 Editar usuario
             </h1>
-
             <p class="text-muted">
                 Modifica los datos del usuario seleccionado.
             </p>
-
         </div>
-
 
         <!-- Formulario -->
         <div class="card shadow-sm border-0">
-
             <div class="card-body">
-
                 <form id="formEditarUsuario">
-
                     <div class="row">
-
                         <!-- RUN -->
                         <div class="col-md-6 mb-3">
-
                             <label for="run" class="form-label">
                                 RUN
                             </label>
-
                             <input type="text"
                                 id="run"
                                 class="form-control"
                                 maxlength="9"
                                 readonly>
-
                         </div>
-
-
                         <!-- Rol -->
                         <div class="col-md-6 mb-3">
 
                             <label for="rol" class="form-label">
                                 Perfil / rol
                             </label>
-
                             <select id="rol"
                                 class="form-select"
                                 required>
-
                                 <option value="Administrador">
                                     Administrador
                                 </option>
-
                                 <option value="Vendedor">
                                     Vendedor
                                 </option>
-
                                 <option value="Cliente">
                                     Cliente
                                 </option>
-
+                                <option value="Veterinario">
+                                    Veterinario
+                                </option>
                             </select>
-
                         </div>
 
 

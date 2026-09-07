@@ -1,26 +1,40 @@
 
 console.log("editarServicioAd.js cargado correctamente");
 
-
 let formulario = document.getElementById("formEditarServicio");
 
-let datosGuardados = localStorage.getItem("servicioEditar");
+// =========================
+// OBTENER ID DEL SERVICIO
+// =========================
 
-console.log("Dato crudo en localStorage:", datosGuardados);
+let parametros = new URLSearchParams(window.location.search);
+let id = Number(parametros.get("id"));
 
+// =========================
+// OBTENER SERVICIOS
+// =========================
+
+let servicios = JSON.parse(
+    localStorage.getItem("servicios")
+) || [];
+
+// =========================
+// BUSCAR SERVICIO
+// =========================
 
 let servicioEditar = null;
 
+for (let i = 0; i < servicios.length; i++) {
 
-try {
-    servicioEditar = JSON.parse(datosGuardados);
-} catch (error) {
-    console.log("Error al parsear:", error);
+    if (servicios[i].id === id) {
+        servicioEditar = servicios[i];
+        break;
+    }
 }
 
-
-console.log("servicioEditar procesado:", servicioEditar);
-
+// =========================
+// COMPROBAR SERVICIO
+// =========================
 
 if (!servicioEditar) {
 
@@ -30,121 +44,134 @@ if (!servicioEditar) {
 
 } else {
 
-
-    // Cargar datos del servicio
+    // =========================
+    // CARGAR DATOS
+    // =========================
 
     document.getElementById("id").value =
         servicioEditar.id || "";
 
+    document.getElementById("codigo").value =
+        servicioEditar.codigo || "";
+
+    document.getElementById("categoria").value =
+        servicioEditar.categoria || "";
+
     document.getElementById("nombre").value =
         servicioEditar.nombre || "";
 
-    document.getElementById("descripcion").value =
-        servicioEditar.descripcion || "";
+    document.getElementById("especie").value =
+        servicioEditar.especie || "";
+
+    document.getElementById("duracion").value =
+        servicioEditar.duracion || "";
 
     document.getElementById("precio").value =
         servicioEditar.precio || "";
 
-    document.getElementById("estado").value =
-        servicioEditar.estado || "";
+    document.getElementById("observaciones").value =
+        servicioEditar.observaciones || "";
 
 
-    // Guardar cambios
+    // =========================
+    // GUARDAR CAMBIOS
+    // =========================
 
-    formulario.addEventListener("submit", function (event) {
+    formulario.addEventListener("submit", function(event) {
 
         event.preventDefault();
 
+        let codigo =
+            document.getElementById("codigo").value.trim();
+
+        let categoria =
+            document.getElementById("categoria").value;
 
         let nombre =
             document.getElementById("nombre").value.trim();
 
-        let descripcion =
-            document.getElementById("descripcion").value.trim();
+        let especie =
+            document.getElementById("especie").value;
+
+        let duracion =
+            document.getElementById("duracion").value.trim();
 
         let precio =
             document.getElementById("precio").value;
 
-        let estado =
-            document.getElementById("estado").value;
+        let observaciones =
+            document.getElementById("observaciones").value.trim();
 
 
-        // Validaciones
+        // =========================
+        // VALIDACIONES
+        // =========================
+
+        if (codigo === "") {
+            alert("Debes ingresar el código.");
+            return;
+        }
+
+        if (categoria === "") {
+            alert("Debes seleccionar una categoría.");
+            return;
+        }
 
         if (nombre === "") {
-
             alert("Debes ingresar el nombre del servicio.");
-
             return;
         }
-
 
         if (nombre.length > 100) {
-
             alert("El nombre no puede superar los 100 caracteres.");
-
             return;
         }
 
-
-        if (descripcion === "") {
-
-            alert("Debes ingresar una descripción.");
-
+        if (especie === "") {
+            alert("Debes seleccionar una especie.");
             return;
         }
 
-
-        if (descripcion.length > 500) {
-
-            alert("La descripción no puede superar los 500 caracteres.");
-
+        if (duracion === "") {
+            alert("Debes ingresar la duración.");
             return;
         }
 
-
-        if (precio === "" || Number(precio) < 0) {
-
+        if (precio === "" || Number(precio) <= 0) {
             alert("Debes ingresar un precio válido.");
+            return;
+        }
 
+        if (observaciones.length > 500) {
+            alert("Las observaciones no pueden superar los 500 caracteres.");
             return;
         }
 
 
-        if (estado === "") {
-
-            alert("Debes seleccionar un estado.");
-
-            return;
-        }
-
-
-        // Obtener servicios
-
-        let servicios =
-            JSON.parse(localStorage.getItem("servicios")) || [];
-
-
-        // Buscar servicio
+        // =========================
+        // MODIFICAR SERVICIO
+        // =========================
 
         for (let i = 0; i < servicios.length; i++) {
 
-            if (servicios[i].id === servicioEditar.id) {
+            if (servicios[i].id === id) {
 
+                servicios[i].codigo = codigo;
+                servicios[i].categoria = categoria;
                 servicios[i].nombre = nombre;
-
-                servicios[i].descripcion = descripcion;
-
-                servicios[i].precio = precio;
-
-                servicios[i].estado = estado;
+                servicios[i].especie = especie;
+                servicios[i].duracion = duracion;
+                servicios[i].precio = Number(precio);
+                servicios[i].observaciones = observaciones;
 
                 break;
             }
         }
 
 
-        // Guardar nuevamente
+        // =========================
+        // GUARDAR
+        // =========================
 
         localStorage.setItem(
             "servicios",
@@ -152,13 +179,7 @@ if (!servicioEditar) {
         );
 
 
-        // Eliminar dato temporal
-
-        localStorage.removeItem("servicioEditar");
-
-
         alert("Servicio actualizado correctamente.");
-
 
         window.location.href = "serviciosAd.html";
 

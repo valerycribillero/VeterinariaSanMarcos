@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -6,18 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Usuarios | Veterinaria San Marcos</title>
+    <title>Administración de roles | Veterinaria San Marcos</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
         rel="stylesheet">
 
     <!-- CSS de esta página -->
-    <link rel="stylesheet" href="usuarios.css">
+    <link rel="stylesheet" href="rolesAd.css">
 
     <!-- CSS común del menú -->
     <link rel="stylesheet" href="menuAd.css">
-
 </head>
 
 <body class="d-flex bg-light">
@@ -58,28 +56,29 @@
             </li>
 
             <li>
-                <a href="usuariosAd.html" class="active">
+                <a href="usuariosAd.html">
                     Usuarios
                 </a>
             </li>
+
             <li>
                 <a href="productoAd.html">
                     Productos
                 </a>
             </li>
+
             <li>
                 <a href="serviciosAd.html">
                     Servicios
                 </a>
             </li>
-
             <li>
                 <a href="mensajesAd.html">
                     Mensajes
                 </a>
             </li>
             <li>
-                <a href="rolesAd.html">
+                <a href="rolesAd.html" class="active">
                     Roles
                 </a>
             </li>
@@ -118,70 +117,58 @@
     <main class="flex-grow-1 p-4">
 
         <!-- Encabezado -->
-        <div class="d-flex justify-content-between align-items-center mb-4">
+        <div class="mb-4">
 
-            <div>
+            <h1 class="h3">
+                Administración de roles
+            </h1>
 
-                <h1 class="h3 mb-1">
-                    Usuarios
-                </h1>
-
-                <p class="text-muted mb-0">
-                    Listado de usuarios registrados en el sistema.
-                </p>
-
-            </div>
-
-            <a href="crearUsuarioAd.html" class="btn btn-dark">
-                Nuevo usuario
-            </a>
+            <p class="text-muted">
+                Gestiona los roles de los usuarios de la veterinaria.
+            </p>
 
         </div>
 
 
-        <!-- Tabla de usuarios -->
+        <!-- Mensaje -->
+        <div id="mensajeExito"
+            class="alert alert-success"
+            style="display: none;">
+        </div>
+
+
+        <!-- =========================
+             TABLA DE USUARIOS
+             ========================= -->
+
         <div class="card shadow-sm border-0">
 
             <div class="card-body">
 
+                <h5 class="mb-3">
+                    Usuarios y roles
+                </h5>
+
                 <div class="table-responsive">
 
-                    <table class="table table-hover align-middle mb-0">
+                    <table class="table table-hover">
 
-                        <thead class="table-light">
+                        <thead>
 
                             <tr>
-
-                                <th>
-                                    RUN
-                                </th>
-
-                                <th>
-                                    Nombre
-                                </th>
-
-                                <th>
-                                    Apellidos
-                                </th>
-
-                                <th>
-                                    Correo
-                                </th>
-
-                                <th>
-                                    Perfil
-                                </th>
-
-                                <th>
-                                    Acciones
-                                </th>
-
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                                <th>Rol actual</th>
+                                <th>Nuevo rol</th>
+                                <th>Acción</th>
                             </tr>
 
                         </thead>
 
-                        <!-- usuariosAd.js carga las filas aquí -->
-                        <tbody id="tablaUsuarios">
+                        <tbody id="tablaRoles">
+
+                            <!-- Los usuarios aparecerán aquí -->
+
                         </tbody>
 
                     </table>
@@ -199,7 +186,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- JavaScript -->
-    <script src="usuariosAd.js"></script>
+    <script src="rolesAd.js"></script>
 
 </body>
 

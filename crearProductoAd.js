@@ -1,9 +1,9 @@
 
 // =========================
-// CREAR SERVICIO
+// CREAR PRODUCTO
 // =========================
 
-let formulario = document.getElementById("formCrearServicio");
+let formulario = document.getElementById("formCrearProducto");
 
 
 // =========================
@@ -11,12 +11,15 @@ let formulario = document.getElementById("formCrearServicio");
 // =========================
 
 let categorias = [
-    "Consultas",
-    "Vacunación",
-    "Cirugía",
-    "Desparasitación",
-    "Exámenes",
-    "Otros"
+    "Antibióticos",
+    "Antiparasitarios",
+    "Antiinflamatorios",
+    "Dermatología",
+    "Digestivo",
+    "Cardíaco",
+    "Analgésicos",
+    "Vacunas",
+    "Suplementos"
 ];
 
 let selectCategoria = document.getElementById("categoria");
@@ -38,9 +41,7 @@ for (let i = 0; i < categorias.length; i++) {
 let especies = [
     "Perro",
     "Gato",
-    "Perro / Gato",
-    "Ave / Conejo",
-    "Todas"
+    "Perro / Gato"
 ];
 
 let selectEspecie = document.getElementById("especie");
@@ -56,7 +57,7 @@ for (let i = 0; i < especies.length; i++) {
 
 
 // =========================
-// GUARDAR SERVICIO
+// GUARDAR PRODUCTO
 // =========================
 
 formulario.addEventListener("submit", function(event) {
@@ -71,10 +72,11 @@ formulario.addEventListener("submit", function(event) {
     let codigo = document.getElementById("codigo").value.trim();
     let categoria = document.getElementById("categoria").value;
     let nombre = document.getElementById("nombre").value.trim();
+    let principioActivo = document.getElementById("principioActivo").value.trim();
+    let presentacion = document.getElementById("presentacion").value.trim();
     let especie = document.getElementById("especie").value;
-    let duracion = document.getElementById("duracion").value.trim();
+    let stock = document.getElementById("stock").value;
     let precio = document.getElementById("precio").value;
-    let observaciones = document.getElementById("observaciones").value.trim();
 
 
     // =========================
@@ -92,7 +94,17 @@ formulario.addEventListener("submit", function(event) {
     }
 
     if (nombre === "") {
-        alert("Debes ingresar el nombre del servicio.");
+        alert("Debes ingresar el nombre comercial.");
+        return;
+    }
+
+    if (principioActivo === "") {
+        alert("Debes ingresar el principio activo.");
+        return;
+    }
+
+    if (presentacion === "") {
+        alert("Debes ingresar la presentación.");
         return;
     }
 
@@ -101,8 +113,8 @@ formulario.addEventListener("submit", function(event) {
         return;
     }
 
-    if (duracion === "") {
-        alert("Debes ingresar la duración.");
+    if (stock === "" || Number(stock) < 0) {
+        alert("Debes ingresar un stock válido.");
         return;
     }
 
@@ -113,11 +125,11 @@ formulario.addEventListener("submit", function(event) {
 
 
     // =========================
-    // OBTENER SERVICIOS
+    // OBTENER PRODUCTOS
     // =========================
 
-    let servicios = JSON.parse(
-        localStorage.getItem("servicios")
+    let productos = JSON.parse(
+        localStorage.getItem("productos")
     ) || [];
 
 
@@ -125,11 +137,11 @@ formulario.addEventListener("submit", function(event) {
     // VERIFICAR CÓDIGO REPETIDO
     // =========================
 
-    for (let i = 0; i < servicios.length; i++) {
+    for (let i = 0; i < productos.length; i++) {
 
-        if (servicios[i].codigo.toLowerCase() === codigo.toLowerCase()) {
+        if (productos[i].codigo.toLowerCase() === codigo.toLowerCase()) {
 
-            alert("Ya existe un servicio con ese código.");
+            alert("Ya existe un producto con ese código.");
             return;
         }
     }
@@ -141,35 +153,38 @@ formulario.addEventListener("submit", function(event) {
 
     let nuevoId = 1;
 
-    for (let i = 0; i < servicios.length; i++) {
+    for (let i = 0; i < productos.length; i++) {
 
-        if (servicios[i].id >= nuevoId) {
-            nuevoId = servicios[i].id + 1;
+        if (productos[i].id >= nuevoId) {
+            nuevoId = productos[i].id + 1;
         }
     }
 
 
     // =========================
-    // CREAR SERVICIO
+    // CREAR PRODUCTO
     // =========================
 
-    let nuevoServicio = {
+    let nuevoProducto = {
+
         id: nuevoId,
         codigo: codigo,
         categoria: categoria,
         nombre: nombre,
+        principioActivo: principioActivo,
+        presentacion: presentacion,
         especie: especie,
-        duracion: duracion,
-        precio: Number(precio),
-        observaciones: observaciones
+        stock: Number(stock),
+        precio: Number(precio)
+
     };
 
 
     // =========================
-    // AGREGAR SERVICIO
+    // AGREGAR PRODUCTO
     // =========================
 
-    servicios.push(nuevoServicio);
+    productos.push(nuevoProducto);
 
 
     // =========================
@@ -177,8 +192,8 @@ formulario.addEventListener("submit", function(event) {
     // =========================
 
     localStorage.setItem(
-        "servicios",
-        JSON.stringify(servicios)
+        "productos",
+        JSON.stringify(productos)
     );
 
 
@@ -188,7 +203,7 @@ formulario.addEventListener("submit", function(event) {
 
     let mensaje = document.getElementById("mensajeExito");
 
-    mensaje.textContent = "Servicio agregado correctamente.";
+    mensaje.textContent = "Producto agregado correctamente.";
     mensaje.style.display = "block";
 
 

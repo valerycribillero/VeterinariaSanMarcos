@@ -108,61 +108,82 @@ main > div:first-child p {
 
 
 /* =========================
-   FORMULARIO
+   TABLA
 ========================= */
 
-.form-label {
-    color: #063d2f !important;
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    background-color: #063d2f !important;
+    color: white !important;
     font-weight: bold;
+    white-space: nowrap;
 }
 
-.form-control,
-.form-select {
-    border: 1px solid #ddd !important;
-    border-radius: 6px !important;
-    padding: 10px !important;
+.table tbody td {
+    vertical-align: middle;
 }
 
-.form-control:focus,
-.form-select:focus {
-    border-color: #d99b43 !important;
-    box-shadow: 0 0 0 0.15rem rgba(217, 155, 67, 0.25) !important;
+.table tbody tr:hover {
+    background-color: #f8f9fa;
 }
 
 
 /* =========================
-   BOTONES
+   BOTÓN NUEVO
 ========================= */
 
-.botones {
-    display: flex;
-    gap: 10px;
-}
-
-.btn-guardar {
+.btn-primary {
     background-color: #d99b43 !important;
     border-color: #d99b43 !important;
     color: white !important;
-    padding: 8px 16px !important;
     border-radius: 6px !important;
 }
 
-.btn-guardar:hover {
+.btn-primary:hover {
     background-color: #063d2f !important;
     border-color: #063d2f !important;
 }
 
-.btn-cancelar {
-    background-color: #777 !important;
-    border-color: #777 !important;
+
+/* =========================
+   BOTÓN EDITAR
+========================= */
+
+.btn-editar {
+    background-color: #d99b43 !important;
+    border-color: #d99b43 !important;
     color: white !important;
-    padding: 8px 16px !important;
+    padding: 6px 12px !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+}
+
+.btn-editar:hover {
+    background-color: #063d2f !important;
+    border-color: #063d2f !important;
+    color: white !important;
+}
+
+
+/* =========================
+   BOTÓN ELIMINAR
+========================= */
+
+.btn-eliminar {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+    color: white !important;
+    padding: 6px 12px !important;
     border-radius: 6px !important;
 }
 
-.btn-cancelar:hover {
+.btn-eliminar:hover {
     background-color: #063d2f !important;
     border-color: #063d2f !important;
+    color: white !important;
 }
 
 
@@ -193,9 +214,9 @@ main > div:first-child p {
         display: block;
     }
 
-    .botones {
-        display: flex;
-        flex-wrap: wrap;
+    .encabezado .btn {
+        margin-top: 15px;
     }
+
 }
 

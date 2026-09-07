@@ -1,6 +1,6 @@
 
 /* =========================
-   EDITAR SERVICIO
+   ESTILO GENERAL
 ========================= */
 
 body {
@@ -23,9 +23,6 @@ aside {
     border-right: 1px solid #ddd !important;
 }
 
-
-/* Logo y nombre */
-
 aside > a {
     color: #063d2f !important;
 }
@@ -33,9 +30,6 @@ aside > a {
 aside > a span {
     color: #063d2f !important;
 }
-
-
-/* Texto Administración */
 
 aside > p {
     color: #777 !important;
@@ -52,25 +46,16 @@ aside .nav-link {
     border-radius: 6px !important;
 }
 
-
-/* Hover */
-
 aside .nav-link:hover {
     background-color: #063d2f !important;
     color: white !important;
 }
-
-
-/* Elemento activo */
 
 aside .nav-pills .nav-link.active {
     background-color: #063d2f !important;
     color: white !important;
     font-weight: bold;
 }
-
-
-/* Cerrar sesión */
 
 aside .text-danger {
     color: #dc3545 !important;
@@ -85,19 +70,24 @@ main {
     padding: 35px !important;
 }
 
-
-/* Título */
-
 main h1 {
     color: #063d2f !important;
     font-size: 30px;
 }
 
-
-/* Descripción */
-
-main > div:first-child p {
+main p {
     color: #063d2f !important;
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
@@ -141,37 +131,40 @@ main > div:first-child p {
 
 
 /* =========================
-   BOTÓN GUARDAR
+   BOTONES
 ========================= */
 
-form .btn-primary {
+.botones {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.btn-guardar {
     background-color: #d99b43 !important;
-    border: none !important;
+    border-color: #d99b43 !important;
     color: white !important;
-    padding: 8px 16px !important;
+    padding: 10px 18px !important;
     border-radius: 6px !important;
 }
 
-form .btn-primary:hover {
+.btn-guardar:hover {
     background-color: #063d2f !important;
+    border-color: #063d2f !important;
     color: white !important;
 }
 
-
-/* =========================
-   BOTÓN CANCELAR
-========================= */
-
-form .btn-secondary {
+.btn-cancelar {
     background-color: #777 !important;
-    border: none !important;
+    border-color: #777 !important;
     color: white !important;
-    padding: 8px 16px !important;
+    padding: 10px 18px !important;
     border-radius: 6px !important;
 }
 
-form .btn-secondary:hover {
+.btn-cancelar:hover {
     background-color: #063d2f !important;
+    border-color: #063d2f !important;
     color: white !important;
 }
 
@@ -197,6 +190,14 @@ form .btn-secondary:hover {
 
     main h1 {
         font-size: 25px;
+    }
+
+    .botones {
+        justify-content: stretch;
+    }
+
+    .botones .btn {
+        flex: 1;
     }
 
 }
