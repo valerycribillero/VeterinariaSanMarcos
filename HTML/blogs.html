@@ -38,10 +38,10 @@
                         </li>
                     </ul>
 
-                    <a href="login.html" class="btn btn-primary" style="background-color: #d99b43; border-color: #d99b43;">
+                    <a href="login.html" class="btn btn-primary btn-gold">
                         Iniciar sesión
                     </a>
-                    <a href="cita.html" class="btn btn-primary ms-2" style="background-color: #d99b43; border-color: #d99b43;">
+                    <a href="cita.html" class="btn btn-primary btn-gold ms-2">
                         Reservar cita
                     </a>
                     <a href="carrito.html" class="btn btn-carrito ms-2">
@@ -54,7 +54,7 @@
     </header>
 
     <main class="container my-5">
-        <h1 class="text-center fw-bold mb-4" style="color: #063d2f;">Blog de Salud Animal</h1>
+        <h1 class="text-center fw-bold mb-4 page-title">Blog de Salud Animal</h1>
         <p class="text-center text-muted mb-5">Consejos y artículos informativos redactados por nuestro equipo veterinario.</p>
 
         <div class="row g-4">
@@ -62,21 +62,18 @@
             <!-- TARJETA BLOG 1 -->
             <div class="col-md-6">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="img/perrocepillo.jpg" class="card-img-top" alt="Cuidado Dental Canino" style="height: 220px; object-fit: cover;">
+                    <img src="img/blog1.jpg" class="card-img-top blog-card-img" alt="Cuidado Dental Canino">
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title fw-bold" style="color: #063d2f;">La importancia de la higiene dental en perros</h5>
+                        <h5 class="card-title fw-bold blog-title">La importancia de la higiene dental en perros</h5>
                         
-                        <!-- Muestra inicial corta -->
                         <p class="card-text text-secondary">
                             Mantener los dientes limpios en los perros evita problemas graves de salud como el sarro, la gingivitis y bacterias que pueden migrar a sus órganos vitales...
                         </p>
 
-                        <!-- Botón para desplegar vista previa hacia abajo -->
                         <button class="btn btn-sm btn-outline-secondary mb-3 align-self-start" type="button" data-bs-toggle="collapse" data-bs-target="#despliegueBlog1">
                             ▼ Ver resumen rápido
                         </button>
 
-                        <!-- Contenido desplegable -->
                         <div class="collapse mb-3" id="despliegueBlog1">
                             <div class="card card-body bg-light border-0 text-muted small">
                                 <p><strong>Resumen del artículo:</strong></p>
@@ -88,9 +85,8 @@
                             </div>
                         </div>
 
-                        <!-- Botón directo hacia la página HTML individual con más información e imagen extra -->
-                        <a href="blog1.html" class="btn btn-primary mt-auto" style="background-color: #d99b43; border-color: #d99b43;">
-                            Leer artículo completo →
+                        <a href="blog1.html" class="btn btn-primary btn-gold mt-auto">
+                            Leer artículo completo e imágenes →
                         </a>
                     </div>
                 </div>
@@ -99,21 +95,18 @@
             <!-- TARJETA BLOG 2 -->
             <div class="col-md-6">
                 <div class="card h-100 shadow-sm border-0">
-                    <img src="img/blog2.jpg" class="card-img-top" alt="Vacunación en Felinos" style="height: 220px; object-fit: cover;">
+                    <img src="img/blog2.jpg" class="card-img-top blog-card-img" alt="Vacunación en Felinos">
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title fw-bold" style="color: #063d2f;">Calendario de vacunación indispensable para gatos</h5>
+                        <h5 class="card-title fw-bold blog-title">Calendario de vacunación indispensable para gatos</h5>
                         
-                        <!-- Muestra inicial corta -->
                         <p class="card-text text-secondary">
                             Las vacunas son la barrera principal contra enfermedades mortales como la Rinotraqueítis, la Leucemia Felina y el Virus de la Rabia...
                         </p>
 
-                        <!-- Botón para desplegar vista previa hacia abajo -->
                         <button class="btn btn-sm btn-outline-secondary mb-3 align-self-start" type="button" data-bs-toggle="collapse" data-bs-target="#despliegueBlog2">
                             ▼ Ver resumen rápido
                         </button>
 
-                        <!-- Contenido desplegable -->
                         <div class="collapse mb-3" id="despliegueBlog2">
                             <div class="card card-body bg-light border-0 text-muted small">
                                 <p><strong>Resumen del artículo:</strong></p>
@@ -125,9 +118,8 @@
                             </div>
                         </div>
 
-                        <!-- Botón directo hacia la página HTML individual con más información e imagen extra -->
-                        <a href="blog2.html" class="btn btn-primary mt-auto" style="background-color: #d99b43; border-color: #d99b43;">
-                            Leer artículo completo →
+                        <a href="blog2.html" class="btn btn-primary btn-gold mt-auto">
+                            Leer artículo completo e imágenes →
                         </a>
                     </div>
                 </div>
@@ -161,6 +153,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="blogs.js"></script>
     <script src="app-integration.js"></script>
 </body>
 </html>
