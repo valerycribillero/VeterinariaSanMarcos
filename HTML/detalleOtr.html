@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de sesión</title>
-    <link rel="stylesheet" href="header.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="login.css">
-</head>
+    <title>Detalle otro</title>
+    <link rel="stylesheet" href="/CSS/todosDetServ.css">
+    <link rel="stylesheet" href="/CSS/header.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
+</head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="veterinaria.html">
+                <a class="navbar-brand d-flex align-items-center" href="/HTML/veterinaria.html">
                     <img src="img/logo1.png"
                         alt="Logo"
                         width="45"
                         height="45"
                         class="me-2">
 
-                    <span class="fw-bold" href="veterinaria.html">Veterinaria san Marcos</span>
+                    <span class="fw-bold" href="/HTML/veterinaria.html">Veterinaria san Marcos</span>
                 </a>
 
                 <!-- para que se pueda ver bien en celu -->
@@ -35,7 +35,7 @@
                 <div class="collapse navbar-collapse" id="menuPrincipal">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="servicios.html">Servicios</a>
+                            <a class="nav-link" href="/HTML/servicios.html">Servicios</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Equipo</a>
@@ -47,67 +47,31 @@
                     </ul>
 
                     <!-- Botón Login -->
-                    <a href="login.html" class="btn btn-primary" style="background-color: #d99b43; border-color: #d99b43;">
+                    <a href="/HTML/login.html" class="btn btn-primary" style="background-color: #d99b43; border-color: #d99b43;">
                         Iniciar sesión
                     </a>
-                    <a href="cita.html" class="btn btn-primary ms-2" style="background-color: #d99b43; border-color: #d99b43;">
+                    <a href="/HTML/cita.html" class="btn btn-primary ms-2" style="background-color: #d99b43; border-color: #d99b43;">
                         Reservar cita
                     </a>
-                    <a href="carrito.html" class="btn btn-carrito ms-2">
+                    <a href="/HTML/carrito.html" class="btn btn-carrito ms-2">
                         🛒
                         <span id="contadorCarrito"></span>
-                    </a>5
-
+                    </a>
                 </div>
             </div>
         </nav>
     </header>
 
+    <h1>Detalle de otros servicios disponibles</h1>
 
-    <main class="login">
-        <h1>Inicio de sesión</h1>
-        <form onsubmit="ingresar(); return false;">
-            <div class="form-group">
-                <label for="correo">Correo:</label>
-                <input
-                    type="email"
-                    class="form-control"
-                    id="correo"
-                    maxlength="100"
-                >
-            </div>
+    <h2 style="text-align: center;" id="nombre"></h2>
+    <p style="text-align: center;" id="precio"></p>
+    <p style="text-align: center;" id="especie"></p>
+    <p style="text-align: center;" id="duracion_aprox"></p>
 
+    <br>
 
-            <div class="form-group">
-                <label for="clave">Clave:</label>
-                <input
-                    type="password"
-                    class="form-control"
-                    id="clave"
-                    minlength="4"
-                    maxlength="10"
-                    placeholder="Ingresa tu contraseña"
-                    required
-                >
-            </div>
-
-
-            <div class="form-check">
-                <input
-                    type="checkbox"
-                    class="form-check-input"
-                    id="exampleCheck1"
-                >
-                <label class="form-check-label" for="exampleCheck1">
-                    Mantenme ingresado
-                </label>
-            </div>
-
-            <button type="submit">
-                Ingresar
-            </button>
-        </form>
-    </main>
+    <a href="/HTML/servicios.html" style="text-align: center;"> Volver a ver los servicios disponibles</a>
 
     <footer class="footer">
         <div class="footer-contenido">
@@ -145,9 +109,9 @@
             Todos los derechos reservados.
         </div>
     </footer>
+    
 
-
-    <script src="login.js"></script>
-
+    <script src="/JS/detalleOtr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

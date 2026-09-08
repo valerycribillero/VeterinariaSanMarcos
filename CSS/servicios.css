@@ -1,164 +1,274 @@
-/* =========================
-   ESTILO GENERAL
-========================= */
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa !important;
-    color: #333;
-    min-height: 100vh;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f2;
+    color: #163a31;
 }
-/* =========================
-   MENÚ LATERAL
-========================= */
-aside {
-    width: 250px !important;
-    min-height: 100vh;
-    background-color: white !important;
-    border-right: 1px solid #ddd !important;
+
+.navbar {
+    background-color: #ffffff !important;
+    padding: 10px 0;
+    min-height: 65px;
 }
-/* Logo y nombre */
-aside > a {
-    color: #063d2f !important;
+
+.navbar-brand {
+    color: #123c31 !important;
+    font-size: 15px;
 }
-aside > a span {
-    color: #063d2f !important;
+
+.navbar-brand img {
+    object-fit: contain;
 }
-/* Texto Administración */
-aside > p {
-    color: #777 !important;
+
+.nav-link {
+    color: #23443b !important;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 8px;
+    transition: color 0.2s ease;
 }
-/* =========================
-   ENLACES DEL MENÚ
-========================= */
-aside .nav-link {
-    color: #333 !important;
-    background-color: transparent !important;
-    border-radius: 6px !important;
+
+.nav-link:hover {
+    color: #d99b43 !important;
 }
-/* Hover */
-aside .nav-link:hover {
-    background-color: #063d2f !important;
-    color: white !important;
+
+.nav-link.active {
+    color: #d99b43 !important;
+    font-weight: 600;
 }
-/* Elemento activo */
-aside .nav-pills .nav-link.active {
-    background-color: #063d2f !important;
-    color: white !important;
-    font-weight: bold;
+
+.botones-navbar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
-/* Cerrar sesión */
-aside .text-danger {
-    color: #dc3545 !important;
-}
-/* =========================
-   CONTENIDO
-========================= */
-main {
-    padding: 35px !important;
-}
-/* Título */
-main h1 {
-    color: #063d2f !important;
-    font-size: 30px;
-}
-/* Descripción */
-main p {
-    color: #063d2f !important;
-}
-/* =========================
-   BOTÓN NUEVO SERVICIO
-========================= */
-.btn-dark {
-    background-color: #d99b43 !important;
-    border-color: #d99b43 !important;
-    color: white !important;
-    padding: 10px 18px;
+
+.botones-navbar .btn {
+    border: none;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 14px;
     border-radius: 6px;
+    transition: all 0.2s ease;
 }
-.btn-dark:hover {
-    background-color: #063d2f !important;
-    border-color: #063d2f !important;
-    color: white !important;
+
+.btn-login {
+    background-color: #d99b43;
 }
-/* =========================
-   BUSCADOR
-========================= */
-.form-control,
-.form-select {
-    border: 1px solid #ddd !important;
-    border-radius: 6px !important;
-    padding: 10px !important;
+
+.btn-cita {
+    background-color: #d99b43;
 }
-.form-control:focus,
-.form-select:focus {
-    border-color: #d99b43 !important;
-    box-shadow: 0 0 0 0.15rem rgba(217, 155, 67, 0.25) !important;
+
+.btn-login:hover,
+.btn-cita:hover {
+    background-color: #bd8030;
+    color: white;
 }
-/* =========================
-   TARJETA
-========================= */
-.card {
+
+.servicios {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 35px 25px 50px;
+}
+
+.titulo-servicios {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.titulo-servicios h1 {
+    margin: 0 0 5px;
+    color: #10392f;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.titulo-servicios p {
+    margin: 0;
+    color: #68727a;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.contenedor-card {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.servicio-card {
+    width: 100% !important;
+    min-height: 190px;
     border: none !important;
     border-radius: 10px !important;
-    background-color: white !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+    background-color: #ffffff;
+    box-shadow: none;
+    overflow: hidden;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
-.card-body {
-    padding: 25px;
+
+.servicio-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
 }
-/* =========================
-   TABLA
-========================= */
-.table {
-    margin-bottom: 0;
+
+.servicio-card .card-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
-.table th {
-    color: #063d2f !important;
-    font-weight: bold;
+
+.icono-servicio {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 23px;
+    margin-bottom: 7px;
 }
-.table td {
-    color: #555;
+
+.servicio-card .card-title {
+    margin: 0 0 5px;
+    color: #163a31;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.2;
 }
-.table-hover tbody tr:hover {
-    background-color: #f8f8f8;
+
+.servicio-card .card-text {
+    margin: 0;
+    color: #68727a;
+    font-size: 10px;
+    line-height: 1.45;
 }
-/* =========================
-   BOTONES DE ACCIÓN
-========================= */
-.btn-editar {
+
+.btn-servicio {
+    display: inline-block;
+    margin-top: auto;
+    padding: 6px 11px;
     background-color: #d99b43 !important;
-    border-color: #d99b43 !important;
-    color: white !important;
-    padding: 6px 12px !important;
-    border-radius: 6px !important;
-    text-decoration: none !important;
+    border: 1px solid #d99b43 !important;
+    border-radius: 5px;
+    color: #ffffff !important;
+    font-size: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
 }
-.btn-editar:hover {
-    background-color: #063d2f !important;
-    border-color: #063d2f !important;
-    color: white !important;
+
+.btn-servicio:hover {
+    background-color: #bd8030 !important;
+    border-color: #bd8030 !important;
+    color: #ffffff !important;
 }
-.btn-warning {
-    background-color: #d99b43 !important;
-    border-color: #d99b43 !important;
-    color: white !important;
-}
-/* =========================
-   RESPONSIVE
-========================= */
+
 @media (max-width: 768px) {
-    body {
-        display: block !important;
+    .servicios {
+        max-width: 700px;
+        padding: 30px 20px 40px;
     }
-    aside {
-        width: 100% !important;
-        min-height: auto;
+    .contenedor-card {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
     }
-    main {
-        padding: 20px !important;
+    .botones-navbar {
+        margin-top: 12px;
+        padding-bottom: 10px;
     }
-    main h1 {
-        font-size: 25px;
+}
+
+@media (max-width: 500px) {
+
+    .servicios {
+        padding: 25px 15px 35px;
     }
+
+    .titulo-servicios h1 {
+        font-size: 20px;
+    }
+
+    .titulo-servicios p {
+        font-size: 10px;
+    }
+
+    .contenedor-card {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .servicio-card {
+        min-height: 170px;
+    }
+
+    .botones-navbar {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        width: 100%;
+    }
+
+    .botones-navbar .btn {
+        width: 100%;
+
+        text-align: center;
+    }
+
+}
+.footer {
+    background-color: #063d2f;
+    color: white;
+    padding: 35px 20px 15px;
+    margin-top: 40px;
+}
+
+.footer-contenido {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-columna {
+    flex: 1;
+}
+
+.footer-columna h3 {
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-columna p {
+    font-size: 10px;
+    line-height: 1.7;
+    color: #c5d9d3;
+    margin: 0;
+}
+
+.footer-abajo {
+    max-width: 900px;
+    margin: 20px auto 0;
+    padding-top: 15px;
+    border-top: 1px solid #1c5949;
+    text-align: center;
+    font-size: 9px;
+    color: #8fb2a8;
 }
