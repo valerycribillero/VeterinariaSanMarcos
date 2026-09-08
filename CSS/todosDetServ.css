@@ -1,0 +1,291 @@
+body {
+    background-color: #f7f7f4;
+    color: #222;
+}
+
+body > h1 {
+    color: #063b2c;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin: 50px auto 35px !important;
+}
+
+#listaOtros,
+#listaExamenes,
+#listaVacunas,
+#listaCirugias,
+#listaServicios,
+#ListaConsultas,
+#ListaDesparacitacion
+ {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+#listaOtros > div,
+#listaExamenes > div,
+#listaVacunas > div,
+#listaCirugias > div,
+#listaServicios > div,
+#ListaConsultas > div,
+#ListaDesparacitacion > div {
+    background-color: #ffffff;
+    border: 1px solid #e5e5e0;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+    transition: 0.25s ease;
+}
+
+#listaOtros > div:hover,
+#listaExamenes > div:hover,
+#listaVacunas > div:hover,
+#listaCirugias > div:hover,
+#listaServicios > div:hover,
+#ListaConsultas >div:hover,
+#ListaDesparacitacion > div:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+#listaOtros h2,
+#listaOtros h3,
+#listaExamenes h2,
+#listaExamenes h3,
+#listaVacunas h2,
+#listaVacunas h3,
+#listaCirugias h2,
+#listaCirugias h3,
+#listaServicios h2,
+#listaServicios h3,
+#ListaConsultas h2,
+#ListaDesparacitacion h2,
+#ListaConsultas h3,
+#ListaDesparacitacion h3 {
+    color: #063b2c;
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+#listaOtros p,
+#listaExamenes p,
+#listaVacunas p,
+#listaCirugias p,
+#listaServicios p,
+#ListaConsultas p,
+#ListaDesparacitacion p {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+#listaOtros .precio,
+#listaExamenes .precio,
+#listaVacunas .precio,
+#listaCirugias .precio,
+#listaServicios .precio,
+#ListaConsultas .precio,
+#ListaDesparacitacion .precio{
+    color: #d99b43;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+#listaOtros button,
+#listaOtros a,
+#listaExamenes button,
+#listaExamenes a,
+#listaVacunas button,
+#listaVacunas a,
+#listaCirugias button,
+#listaCirugias a,
+#listaServicios button,
+#listaServicios a, 
+#ListaConsultas button,
+#ListaDesparacitacion button,
+#ListaConsultas a,
+#ListaDesparacitacion a{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background-color: #d99b43;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#listaOtros button:hover,
+#listaOtros a:hover,
+#listaExamenes button:hover,
+#listaExamenes a:hover,
+#listaVacunas button:hover,
+#listaVacunas a:hover,
+#listaCirugias button:hover,
+#listaCirugias a:hover,
+#listaServicios button:hover,
+#listaServicios a:hover,
+#ListaConsultas button:hover,
+#ListaDesparacitacion button:haver
+#ListaConsultas a:hover,
+#ListaDesparacitacion a:hover {
+    background-color: #c8872e;
+}
+
+body:has(#nombre) > h1 {
+    width: 90%;
+    max-width: 850px;
+    margin: 50px auto 25px !important;
+    color: #063b2c;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+}
+
+body:has(#nombre) > h2 {
+    width: 90%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 30px 35px 15px;
+    background-color: white;
+    color: #063b2c;
+    font-size: 28px;
+    font-weight: 700;
+    border: 1px solid #e5e5e0;
+    border-bottom: none;
+    border-radius: 12px 12px 0 0;
+}
+
+body:has(#nombre) > p {
+    width: 90%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 12px 35px;
+    background-color: white;
+    color: #666;
+    font-size: 16px;
+    border-left: 1px solid #e5e5e0;
+    border-right: 1px solid #e5e5e0;
+}
+
+body:has(#nombre) > #precio {
+    color: #d99b43;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+body:has(#nombre) > #duracion_aprox {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e5e5e0;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+}
+
+body:has(#nombre) > a {
+    display: block;
+    width: 90%;
+    max-width: 850px;
+    margin: 25px auto 60px;
+    color: #070707;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+body:has(#nombre) > a:hover {
+    color: #161615;
+    text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    #listaOtros,
+    #listaExamenes,
+    #listaVacunas,
+    #listaCirugias,
+    #listaServicios
+    #ListaConsultas
+    #ListaDesparacitacion {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    body > h1,
+    body:has(#nombre) > h1 {
+        font-size: 28px;
+        margin-top: 35px !important;
+    }
+
+    #listaOtros,
+    #listaExamenes,
+    #listaVacunas,
+    #listaCirugias,
+    #listaServicios
+    #ListaConsultas
+    #ListaDesparacitacion {
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+
+    body:has(#nombre) > h2 {
+        font-size: 23px;
+        padding: 25px 22px 12px;
+    }
+
+    body:has(#nombre) > p {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+}
+.footer {
+    background-color: #063d2f;
+    color: white;
+    padding: 35px 20px 15px;
+    margin-top: 40px;
+}
+
+.footer-contenido {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-columna {
+    flex: 1;
+}
+
+.footer-columna h3 {
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-columna p {
+    font-size: 10px;
+    line-height: 1.7;
+    color: #c5d9d3;
+    margin: 0;
+}
+
+.footer-abajo {
+    max-width: 900px;
+    margin: 20px auto 0;
+    padding-top: 15px;
+    border-top: 1px solid #1c5949;
+    text-align: center;
+    font-size: 9px;
+    color: #8fb2a8;
+}
+

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/CSS/veterinaria.css">
+    <link rel="stylesheet" href="/CSS/header.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="/HTML/veterinaria.html">
+                    <img src="img/logo1.png"
+                        alt="Logo"
+                        width="45"
+                        height="45"
+                        class="me-2">
+
+                    <span class="fw-bold" href="/HTML/veterinaria.html">Veterinaria san Marcos</span>
+                </a>
+
+                <!-- para que se pueda ver bien en celu -->
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#menuPrincipal">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- menu -->
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/HTML/servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Equipo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+
+                    </ul>
+
+                    <!-- Botón Login -->
+                    <a href="/HTML/login.html" class="btn btn-primary" style="background-color: #d99b43; border-color: #d99b43;">
+                        Iniciar sesión
+                    </a>
+                    <a href="/HTML/cita.html" class="btn btn-primary ms-2" style="background-color: #d99b43; border-color: #d99b43;">
+                        Reservar cita
+                    </a>
+                    <a href="/HTML/carrito.html" class="btn btn-carrito ms-2">
+                        🛒
+                        <span id="contadorCarrito"></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="inicio">
+        <h1>Tu mascota en <br>
+        las mejores manos</h1>
+
+        <p>Veterinaria San Marcos es una clínica veterinaria ubicada en Rancagua, Región del Libertador General Bernardo O'Higgins. Fue fundada en 2009 y cuenta con 3 médicos veterinarios, 1 técnico veterinario y 1 recepcionista administrativa.</p>
+
+        <a href="/HTML/cita.html" class="btn btn-primary">
+            Reservar cita
+        </a>
+
+        <a href="/HTML/servicios.html" class="btn btn-secondary">
+            Ver servicios
+        </a>
+    </section>
+
+    <section class="foto">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+            <img src="img/gato.jpg" class="d-block w-100" alt="gatito">
+            </div>
+            <div class="carousel-item">
+            <img src="img/perro.jpg" class="d-block w-100" alt="perrito">
+            </div>
+            <div class="carousel-item">
+            <img src="img/vetericosas.jpg" class="d-block w-100" alt="veterinarcosas">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+        </div>
+    </section>
+
+    <section class="beneficios">
+
+        <h2>¿Por qué elegirnos?</h2>
+        <p class="subtitulo">
+            Cuidamos a tu mascota como parte de nuestra familia.
+        </p>
+        <div class="beneficios-grid">
+            <div class="beneficio">
+                <div class="icono">🩺</div>
+                <h3>Atención profesional</h3>
+                <p>
+                    Profesionales preparados para cuidar
+                    la salud de tu mascota.
+                </p>
+            </div>
+            <div class="beneficio">
+                <div class="icono">❤️</div>
+                <h3>Cuidado con cariño</h3>
+                <p>
+                    Tratamos a cada mascota con
+                    paciencia, respeto y dedicación.
+                </p>
+            </div>
+            <div class="beneficio">
+                <div class="icono">🏆</div>
+                <h3>Experiencia</h3>
+                <p>
+                    Más de 15 años cuidando mascotas
+                    en Rancagua.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="tienda">
+        <br>
+        <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Tienda</h5>
+            <p class="card-text">Contamos tambien con productos a la venta que podrian interesarte</p>
+            <a href="/HTML/tienda.html" class="btn btn-primary">Echale un ojo</a>
+        </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer-contenido">
+            <div class="footer-columna">
+                <h3>🐾 Veterinaria San Marcos</h3>
+                <p>
+                    Cuidando la salud de tus mascotas
+                    desde 2009 en Rancagua.
+                </p>
+            </div>
+            <div class="footer-columna">
+                <h3>Horario</h3>
+                <p>
+                    Lunes - Viernes: 13:30 - 19:30
+                    <br>
+                    Sábados: 9:00 - 13:00
+                    <br>
+                    Domingo: Cerrado
+                </p>
+            </div>
+
+            <div class="footer-columna">
+                <h3>Contacto</h3>
+                <p>
+                    📍 Av. Brasil 2140, Rancagua
+                    <br>
+                    📞 +56 9 1234 5678
+                    <br>
+                    ✉ contacto@veterinariasanmarcos.cl
+                </p>
+            </div>
+        </div>
+        <div class="footer-abajo">
+            © 2026 Veterinaria San Marcos.
+            Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
