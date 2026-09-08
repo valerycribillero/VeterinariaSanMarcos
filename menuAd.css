@@ -1,0 +1,99 @@
+/* =========================
+   MENÚ VERTICAL ADMINISTRADOR
+   ========================= */
+aside {
+    width: 250px;
+    min-height: 100vh;
+    background-color: white;
+    border-right: 1px solid #ddd;
+    padding: 20px !important;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+/* Logo y nombre */
+aside > a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none !important;
+    color: #063d2f !important;
+    margin-bottom: 30px !important;
+}
+aside > a img {
+    width: 45px;
+    height: 45px;
+}
+aside > a span {
+    font-weight: bold;
+    color: #063d2f !important;
+}
+/* Título Administración */
+aside p {
+    color: #777 !important;
+    font-size: 13px;
+    text-transform: uppercase;
+    margin-bottom: 10px !important;
+}
+/* Lista */
+aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+aside li {
+    margin-bottom: 8px;
+}
+/* Enlaces del menú */
+aside li a {
+    display: block;
+    padding: 10px 12px;
+    text-decoration: none !important;
+    color: #333 !important;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+/* Hover */
+aside li a:hover {
+    background-color: #063d2f !important;
+    color: white !important;
+}
+/* Página actual */
+aside li a.active {
+    background-color: #063d2f !important;
+    color: white !important;
+    font-weight: bold;
+}
+/* Parte inferior */
+aside > div {
+    margin-top: auto;
+}
+aside hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+/* Cerrar sesión */
+aside a[href="index.html"] {
+    color: #dc3545 !important;
+}
+aside a[href="index.html"]:hover {
+    background-color: #dc3545 !important;
+    color: white !important;
+}
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 768px) {
+    body {
+        display: block !important;
+    }
+    aside {
+        width: 100%;
+        min-height: auto;
+    }
+    aside > div {
+        margin-top: 20px;
+    }
+}

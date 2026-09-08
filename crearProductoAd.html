@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear producto | Veterinaria San Marcos</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="crearProductoAd.css">
+    <link rel="stylesheet" href="menuAd.css">
+</head>
+<body class="d-flex bg-light">
+    <!-- =========================
+         MENÚ VERTICAL
+    ========================= -->
+    <aside class="p-3 d-flex flex-column">
+        <a href="admin.html" class="d-flex align-items-center gap-2 text-decoration-none mb-4">
+            <img src="img/logo.png"
+                alt="Logo Veterinaria San Marcos"
+                width="45"
+                height="45">
+            <span class="fw-bold">
+                Veterinaria<br>
+                San Marcos
+            </span>
+        </a>
+        <p class="text-uppercase small mb-2">
+            Administración
+        </p>
+        <ul class="nav nav-pills flex-column">
+            <li class="nav-item">
+                <a href="admin.html" class="nav-link">
+                    Inicio
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="usuariosAd.html" class="nav-link">
+                    Usuarios
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="productosAd.html" class="nav-link active">
+                    Productos
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="serviciosAd.html" class="nav-link">
+                    Servicios
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="rolesAd.html" class="nav-link">
+                    Roles
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="mensajesAd.html" class="nav-link">
+                    Mensajes
+                </a>
+            </li>
+        </ul>
+        <div class="mt-auto">
+            <hr>
+            <ul class="nav nav-pills flex-column">
+                <li class="nav-item">
+                    <a href="perfilAdmin.html" class="nav-link">
+                        Mi perfil
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link text-danger">
+                        Cerrar sesión
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+    ========================= -->
+    <main class="flex-grow-1">
+        <!-- Encabezado -->
+        <div class="encabezado">
+            <div>
+                <h1>
+                    Crear producto
+                </h1>
+                <p>
+                    Ingresa los datos del nuevo producto.
+                </p>
+            </div>
+        </div>
+        <!-- Mensaje -->
+        <div id="mensajeExito"
+            class="alert alert-success mt-3"
+            style="display: none;">
+        </div>
+        <!-- Formulario -->
+        <div class="card mt-4">
+            <div class="card-body">
+                <form id="formCrearProducto">
+                    <div class="row">
+                        <!-- Código -->
+                        <div class="col-md-6 mb-3">
+                            <label for="codigo" class="form-label">
+                                Código
+                            </label>
+                            <input type="text"
+                                id="codigo"
+                                class="form-control"
+                                placeholder="Ej: ME023"
+                                required>
+                        </div>
+                        <!-- Categoría -->
+                        <div class="col-md-6 mb-3">
+                            <label for="categoria" class="form-label">
+                                Categoría
+                            </label>
+                            <select id="categoria"
+                                class="form-select"
+                                required>
+                                <option value="">
+                                    Seleccionar categoría
+                                </option>
+                            </select>
+                        </div>
+                        <!-- Nombre -->
+                        <div class="col-md-6 mb-3">
+                            <label for="nombre" class="form-label">
+                                Nombre comercial
+                            </label>
+                            <input type="text"
+                                id="nombre"
+                                class="form-control"
+                                placeholder="Ej: Amoxibay 250mg"
+                                required>
+                        </div>
+                        <!-- Principio activo -->
+                        <div class="col-md-6 mb-3">
+                            <label for="principioActivo" class="form-label">
+                                Principio activo
+                            </label>
+                            <input type="text"
+                                id="principioActivo"
+                                class="form-control"
+                                placeholder="Ej: Amoxicilina"
+                                required>
+                        </div>
+                        <!-- Presentación -->
+                        <div class="col-md-6 mb-3">
+                            <label for="presentacion" class="form-label">
+                                Presentación
+                            </label>
+                            <input type="text"
+                                id="presentacion"
+                                class="form-control"
+                                placeholder="Ej: Blíster 10 comp."
+                                required>
+                        </div>
+                        <!-- Especie -->
+                        <div class="col-md-6 mb-3">
+                            <label for="especie" class="form-label">
+                                Especie
+                            </label>
+                            <select id="especie"
+                                class="form-select"
+                                required>
+                                <option value="">
+                                    Seleccionar especie
+                                </option>
+                            </select>
+                        </div>
+                        <!-- Stock -->
+                        <div class="col-md-6 mb-3">
+                            <label for="stock" class="form-label">
+                                Stock actual
+                            </label>
+                            <input type="number"
+                                id="stock"
+                                class="form-control"
+                                min="0"
+                                placeholder="Ej: 25"
+                                required>
+                        </div>
+                        <!-- Precio -->
+                        <div class="col-md-6 mb-3">
+                            <label for="precio" class="form-label">
+                                Precio unitario (CLP)
+                            </label>
+                            <input type="number"
+                                id="precio"
+                                class="form-control"
+                                min="0"
+                                placeholder="Ej: 5000"
+                                required>
+                        </div>
+                    </div>
+                    <!-- Botones -->
+                    <div class="botones mt-3">
+                        <a href="productosAd.html"
+                            class="btn btn-cancelar">
+                            Cancelar
+                        </a>
+                        <button type="submit"
+                            class="btn btn-guardar">
+                            Guardar producto
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <!-- JavaScript -->
+    <script src="crearProductoAd.js"></script>
+</body>
+</html>
