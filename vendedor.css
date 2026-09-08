@@ -1,7 +1,7 @@
 /* =========================
-   USUARIOS
-   ========================= */
-   body {
+   VENDEDOR
+========================= */
+body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
@@ -11,7 +11,7 @@
 }
 /* =========================
    MENÚ LATERAL
-   ========================= */
+========================= */
 aside {
     width: 250px;
     min-height: 100vh;
@@ -45,7 +45,7 @@ aside p {
 }
 /* =========================
    ENLACES DEL MENÚ
-   ========================= */
+========================= */
 aside ul {
     list-style: none;
     padding: 0;
@@ -83,7 +83,7 @@ aside a[href="index.html"] {
 }
 /* =========================
    CONTENIDO PRINCIPAL
-   ========================= */
+========================= */
 main {
     flex-grow: 1;
     padding: 35px;
@@ -92,37 +92,21 @@ main > div:first-child {
     margin-bottom: 30px;
 }
 main h1 {
+    color: #063d2f;
     font-size: 30px;
     margin-bottom: 8px;
-    color: #063d2f;
 }
 main > div:first-child p {
     color: #063d2f !important;
     margin: 0;
 }
 /* =========================
-   BOTÓN NUEVO USUARIO
-   ========================= */
-.btn-dark {
-    background-color: #063d2f !important;
-    border-color: #063d2f !important;
-    color: white !important;
-    padding: 10px 18px;
-    border-radius: 6px;
+   TARJETAS VENDEDOR
+========================= */
+main .row {
+    max-width: 1000px;
+    margin: 30px auto 0;
 }
-.btn-dark:hover {
-    background-color: #d99b43 !important;
-    border-color: #d99b43 !important;
-    color: white !important;
-}
-.btn-warning {
-    background-color: #d99b43 !important;
-    border-color: #d99b43 !important;
-    color: white !important;
-}
-/* =========================
-   TARJETA
-   ========================= */
 .card {
     height: 100%;
     border: none;
@@ -132,42 +116,32 @@ main > div:first-child p {
 }
 .card-body {
     padding: 25px;
+    display: flex;
+    flex-direction: column;
 }
-/* =========================
-   TABLA
-   ========================= */
-.table {
-    margin-bottom: 0;
-}
-.table th {
+.card h5 {
     color: #063d2f;
-    font-weight: bold;
+    margin-bottom: 12px;
 }
-.table td {
-    color: #555;
+.card p {
+    min-height: 48px;
 }
-.table-hover tbody tr:hover {
-    background-color: #f8f8f8;
-}
-/* =========================
-   BOTONES EDITAR
-   ========================= */
-.btn-editar {
-    background-color: #d99b43 !important;
-    border-color: #d99b43 !important;
-    color: white !important;
-    padding: 6px 12px;
-    border-radius: 6px;
+.card a {
+    align-self: flex-start;
+    margin-top: auto;
+    display: inline-block;
     text-decoration: none;
+    background-color: #d99b43 !important;
+    color: white;
+    padding: 9px 16px;
+    border-radius: 6px;
 }
-.btn-editar:hover {
+.card a:hover {
     background-color: #063d2f !important;
-    border-color: #063d2f !important;
-    color: white !important;
 }
 /* =========================
    RESPONSIVE
-   ========================= */
+========================= */
 @media (max-width: 768px) {
     body {
         display: block;

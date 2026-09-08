@@ -1,8 +1,5 @@
-
 let productos = JSON.parse(localStorage.getItem("productos"));
-
 if (!productos || productos.length === 0) {
-
     productos = [
         {
             id: 1,
@@ -247,22 +244,13 @@ if (!productos || productos.length === 0) {
             precio: 14500
         }
     ];
-
     localStorage.setItem("productos", JSON.stringify(productos));
 }
-
-
 const tabla = document.getElementById("tablaProductos");
-
-
 function mostrarProductos() {
-
     tabla.innerHTML = "";
-
     productos.forEach(function(producto) {
-
         const fila = document.createElement("tr");
-
         fila.innerHTML = `
             <td>${producto.codigo}</td>
             <td>${producto.categoria}</td>
@@ -278,36 +266,24 @@ function mostrarProductos() {
                 </a>
             </td>
         `;
-
         tabla.appendChild(fila);
     });
 }
-
-
 /* Para eliminar- dentro del <td> este botón
-
                 <button class="btn btn-eliminar btn-sm" onclick="eliminarProducto(${producto.id})">
                     Eliminar
                 </button>
-
 ----
 function eliminarProducto(id) {
-
     const confirmar = confirm("¿Estás segura de eliminar este producto?");
-
     if (!confirmar) {
         return;
     }
-
     productos = productos.filter(function(producto) {
         return producto.id !== id;
     });
-
     localStorage.setItem("productos", JSON.stringify(productos));
-
     mostrarProductos();
 }
 */
-
 mostrarProductos();
-

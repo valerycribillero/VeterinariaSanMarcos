@@ -1,7 +1,5 @@
 let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-
 let tabla = document.getElementById("tablaUsuarios");
-
 if (usuarios.length === 0) {
     tabla.innerHTML = `
         <tr>
@@ -11,7 +9,6 @@ if (usuarios.length === 0) {
         </tr>
     `;
 }
-
 for (let i = 0; i < usuarios.length; i++) {
     tabla.innerHTML += `
         <tr>
@@ -29,20 +26,16 @@ for (let i = 0; i < usuarios.length; i++) {
         </tr>
     `;
 }
-
 function editarUsuario(run) {
     let usuarioSeleccionado;
-
     for (let i = 0; i < usuarios.length; i++) {
         if (usuarios[i].run === run) {
             usuarioSeleccionado = usuarios[i];
         }
     }
-
     localStorage.setItem(
         "usuarioEditar",
         JSON.stringify(usuarioSeleccionado)
     );
-
     window.location.href = "editarUsuarioAd.html";
 }

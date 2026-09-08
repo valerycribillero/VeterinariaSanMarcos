@@ -1,10 +1,6 @@
-
 // Lista de servicios
-
 let servicios = JSON.parse(localStorage.getItem("servicios"));
-
 if (!servicios || servicios.length === 0) {
-
     servicios = [
         {
             id: 1,
@@ -317,21 +313,14 @@ if (!servicios || servicios.length === 0) {
             observaciones: "Incluye monitoreo y alimentación básica"
         }
     ];
-
     localStorage.setItem("servicios", JSON.stringify(servicios));
 }
-
-
 // =========================
 // TABLA DE SERVICIOS
 // =========================
-
 let tabla = document.getElementById("tablaServicios");
-
 tabla.innerHTML = "";
-
 for (let i = 0; i < servicios.length; i++) {
-
     tabla.innerHTML += `
         <tr>
             <td>${servicios[i].codigo}</td>
@@ -351,38 +340,24 @@ for (let i = 0; i < servicios.length; i++) {
         </tr>
     `;
 }
-
-
 // =========================
 // EDITAR SERVICIO
 // =========================
-
 function editarServicio(id) {
-
     let servicioSeleccionado = null;
-
     for (let i = 0; i < servicios.length; i++) {
-
         if (servicios[i].id === id) {
-
             servicioSeleccionado = servicios[i];
-
             break;
         }
     }
-
     if (!servicioSeleccionado) {
-
         alert("No se encontró el servicio.");
-
         return;
     }
-
     localStorage.setItem(
         "servicioEditar",
         JSON.stringify(servicioSeleccionado)
     );
-
     window.location.href = "editarServicioAd.html";
 }
-

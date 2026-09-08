@@ -1,8 +1,6 @@
-
 /* =========================
    ESTILO GENERAL
 ========================= */
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -10,80 +8,27 @@ body {
     color: #333;
     min-height: 100vh;
 }
-
-
-/* =========================
-   MENÚ LATERAL
-========================= */
-
-aside {
-    width: 250px !important;
-    min-height: 100vh;
-    background-color: white !important;
-    border-right: 1px solid #ddd !important;
-}
-
-aside > a {
-    color: #063d2f !important;
-}
-
-aside > a span {
-    color: #063d2f !important;
-}
-
-aside > p {
-    color: #777 !important;
-}
-
-aside .nav-link {
-    color: #333 !important;
-    background-color: transparent !important;
-    border-radius: 6px !important;
-}
-
-aside .nav-link:hover {
-    background-color: #063d2f !important;
-    color: white !important;
-}
-
-aside .nav-pills .nav-link.active {
-    background-color: #063d2f !important;
-    color: white !important;
-}
-
-aside .text-danger {
-    color: #dc3545 !important;
-}
-
-
 /* =========================
    CONTENIDO
 ========================= */
-
 main {
     padding: 35px !important;
 }
-
 main h1 {
     color: #063d2f !important;
     font-size: 30px;
 }
-
 main > div:first-child p {
     color: #063d2f !important;
 }
-
 .encabezado {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-
 /* =========================
    TARJETA PERFIL
 ========================= */
-
 .perfil-card {
     border: none !important;
     border-radius: 10px !important;
@@ -91,22 +36,17 @@ main > div:first-child p {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
     margin-top: 25px;
 }
-
 .perfil-card .card-body {
     padding: 30px !important;
 }
-
-
 /* =========================
    ENCABEZADO PERFIL
 ========================= */
-
 .perfil-header {
     display: flex;
     align-items: center;
     gap: 20px;
 }
-
 .perfil-icono {
     width: 70px;
     height: 70px;
@@ -116,17 +56,14 @@ main > div:first-child p {
     align-items: center;
     justify-content: center;
 }
-
 .perfil-icono span {
     font-size: 32px;
 }
-
 .perfil-header h2 {
     color: #063d2f;
     margin: 0 0 8px 0;
     font-size: 24px;
 }
-
 .rol {
     background-color: #d99b43;
     color: white;
@@ -135,45 +72,35 @@ main > div:first-child p {
     font-size: 13px;
     font-weight: bold;
 }
-
-
 /* =========================
    DATOS
 ========================= */
-
 .perfil-card label {
     color: #777;
     font-size: 13px;
     font-weight: bold;
     margin-bottom: 5px;
 }
-
 .perfil-card .row {
     margin-top: 10px;
 }
-
 .perfil-card .row > div {
     margin-bottom: 20px;
 }
-
 .perfil-card p {
     color: #333;
     margin: 0;
     font-size: 16px;
 }
-
-
 /* =========================
    BOTONES
 ========================= */
-
 .botones {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
     margin-top: 10px;
 }
-
 .btn-editar {
     background-color: #d99b43 !important;
     border-color: #d99b43 !important;
@@ -181,12 +108,10 @@ main > div:first-child p {
     padding: 8px 16px !important;
     border-radius: 6px !important;
 }
-
 .btn-editar:hover {
     background-color: #063d2f !important;
     border-color: #063d2f !important;
 }
-
 .btn-cancelar {
     background-color: #777 !important;
     border-color: #777 !important;
@@ -194,47 +119,31 @@ main > div:first-child p {
     padding: 8px 16px !important;
     border-radius: 6px !important;
 }
-
 .btn-cancelar:hover {
     background-color: #063d2f !important;
     border-color: #063d2f !important;
 }
-
-
 /* =========================
    RESPONSIVE
 ========================= */
-
 @media (max-width: 768px) {
-
     body {
         display: block !important;
     }
-
-    aside {
-        width: 100% !important;
-        min-height: auto !important;
-    }
-
     main {
         padding: 20px !important;
     }
-
     main h1 {
         font-size: 25px;
     }
-
     .perfil-header {
         display: block;
     }
-
     .perfil-icono {
         margin-bottom: 15px;
     }
-
     .botones {
         justify-content: flex-start;
         flex-wrap: wrap;
     }
 }
-

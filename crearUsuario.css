@@ -1,8 +1,6 @@
-
 /* =========================
    EDITAR USUARIO
 ========================= */
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -10,136 +8,93 @@ body {
     color: #333;
     min-height: 100vh;
 }
-
-
 /* =========================
    MENÚ LATERAL
 ========================= */
-
 aside {
     background-color: white !important;
     border-right: 1px solid #ddd !important;
     width: 250px !important;
 }
-
-
 /* Logo y nombre */
-
 aside > a {
     color: #063d2f !important;
 }
-
 aside > a span {
     color: #063d2f !important;
 }
-
-
 /* Texto Administración */
-
 aside > p {
     color: #777 !important;
 }
-
-
 /* =========================
    ENLACES DEL MENÚ
 ========================= */
-
 aside .nav-link {
     color: #333 !important;
     background-color: transparent !important;
     border-radius: 6px !important;
 }
-
-
 /* Hover */
-
 aside .nav-link:hover {
     background-color: #063d2f !important;
     color: white !important;
 }
-
-
 /* Elemento activo */
-
 aside .nav-pills .nav-link.active {
     background-color: #063d2f !important;
     color: white !important;
     font-weight: bold;
 }
-
-
 /* =========================
    CONTENIDO PRINCIPAL
 ========================= */
-
 main {
     padding: 35px !important;
 }
-
-
 /* Título */
-
 main h1 {
     color: #063d2f !important;
     font-size: 30px;
 }
-
-
 /* Descripción */
-
 main > div:first-child p {
     color: #063d2f !important;
 }
-
-
 /* =========================
    TARJETA
 ========================= */
-
 main .card {
     background-color: white !important;
     border: none !important;
     border-radius: 10px !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
 }
-
 main .card-body {
     padding: 25px !important;
 }
-
-
 /* =========================
    FORMULARIO
 ========================= */
-
 .form-label {
     color: #063d2f !important;
     font-weight: bold;
 }
-
-
 .form-control,
 .form-select {
     border: 1px solid #ddd !important;
     border-radius: 6px !important;
     padding: 10px !important;
 }
-
-
 /* Campos seleccionados */
-
 .form-control:focus,
 .form-select:focus {
     border-color: #d99b43 !important;
     box-shadow: 0 0 0 0.15rem rgba(217, 155, 67, 0.25) !important;
 }
-
-
 /* =========================
    BOTONES
 ========================= */
-
 form .btn-primary {
     background-color: #d99b43 !important;
     border: none !important;
@@ -147,17 +102,13 @@ form .btn-primary {
     padding: 8px 16px !important;
     border-radius: 6px !important;
 }
-
 form .btn-primary:hover {
     background-color: #063d2f !important;
     color: white !important;
 }
-
-
 /* =========================
    BOTÓN CANCELAR
 ========================= */
-
 form .btn-secondary {
     background-color: #777 !important;
     border: none !important;
@@ -165,17 +116,13 @@ form .btn-secondary {
     padding: 8px 16px !important;
     border-radius: 6px !important;
 }
-
 form .btn-secondary:hover {
     background-color: #063d2f !important;
     color: white !important;
 }
-
-
 /* =========================
    BOTÓN EDITAR
 ========================= */
-
 .btn-editar {
     background-color: #d99b43 !important;
     border: none !important;
@@ -184,35 +131,25 @@ form .btn-secondary:hover {
     border-radius: 6px !important;
     text-decoration: none !important;
 }
-
 .btn-editar:hover {
     background-color: #063d2f !important;
     color: white !important;
 }
-
-
-
 /* =========================
    RESPONSIVE
 ========================= */
-
 @media (max-width: 768px) {
-
     body {
         display: block;
     }
-
     aside {
         width: 100% !important;
         min-height: auto !important;
     }
-
     main {
         padding: 20px !important;
     }
-
     main h1 {
         font-size: 25px;
     }
 }
-

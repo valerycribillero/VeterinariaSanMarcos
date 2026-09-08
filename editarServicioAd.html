@@ -1,52 +1,37 @@
-
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Editar servicio | Veterinaria San Marcos</title>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="editarServicioAd.css">
     <link rel="stylesheet" href="menuAd.css">
 </head>
-
 <body class="d-flex bg-light">
-
     <!-- MENÚ VERTICAL -->
-
     <aside>
-
         <a href="admin.html">
             <img src="img/logo.png" alt="Logo Veterinaria San Marcos" width="45" height="45">
-
             <span>
                 Veterinaria<br>
                 San Marcos
             </span>
         </a>
-
         <p>Administración</p>
-
         <ul>
             <li>
                 <a href="admin.html">Inicio</a>
             </li>
-
             <li>
                 <a href="usuariosAd.html">Usuarios</a>
             </li>
-
             <li>
                 <a href="productosAd.html">Productos</a>
             </li>
-
             <li>
                 <a href="serviciosAd.html" class="active">Servicios</a>
             </li>
-
             <li>
                 <a href="mensajesAd.html">Mensajes</a>
             </li>
@@ -54,94 +39,62 @@
                 <a href="rolesAd.html" class="nav-link">Roles</a>
             </li>
         </ul>
-
         <div>
             <hr>
-
             <ul>
                 <li>
                     <a href="perfilAdmin.html">Mi perfil</a>
                 </li>
-
                 <li>
                     <a href="index.html">Cerrar sesión</a>
                 </li>
             </ul>
         </div>
-
     </aside>
-
-
     <!-- CONTENIDO -->
-
     <main class="flex-grow-1 p-4">
-
         <div class="mb-4">
             <h1 class="h3">Editar servicio</h1>
-
             <p>
                 Modifica los datos del servicio seleccionado.
             </p>
         </div>
-
-
         <!-- FORMULARIO -->
-
         <div class="card shadow-sm border-0">
-
             <div class="card-body">
-
                 <form id="formEditarServicio">
-
                     <div class="row">
-
                         <!-- ID -->
-
                         <div class="col-md-6 mb-3">
-
                             <label for="id" class="form-label">
                                 ID del servicio
                             </label>
-
                             <input
                                 type="text"
                                 id="id"
                                 class="form-control"
                                 readonly>
-
                         </div>
-
-
                         <!-- CÓDIGO -->
-
                         <div class="col-md-6 mb-3">
-
                             <label for="codigo" class="form-label">
                                 Código
                             </label>
-
                             <input
                                 type="text"
                                 id="codigo"
                                 class="form-control"
                                 required>
-
                         </div>
-
-
                         <!-- CATEGORÍA -->
-
                         <div class="col-md-6 mb-3">
-
                             <label for="categoria" class="form-label">
                                 Categoría
                             </label>
-
                             <select
                                 id="categoria"
                                 class="form-select"
                                 required>
-
                                 <option value="">Selecciona una categoría</option>
                                 <option value="Consultas">Consultas</option>
                                 <option value="Vacunación">Vacunación</option>
@@ -149,139 +102,86 @@
                                 <option value="Desparasitación">Desparasitación</option>
                                 <option value="Exámenes">Exámenes</option>
                                 <option value="Otros">Otros</option>
-
                             </select>
-
                         </div>
-
-
                         <!-- ESPECIE -->
-
                         <div class="col-md-6 mb-3">
-
                             <label for="especie" class="form-label">
                                 Especie
                             </label>
-
                             <input
                                 type="text"
                                 id="especie"
                                 class="form-control"
                                 required>
-
                         </div>
-
-
                         <!-- NOMBRE -->
-
                         <div class="col-12 mb-3">
-
                             <label for="nombre" class="form-label">
                                 Nombre del servicio
                             </label>
-
                             <input
                                 type="text"
                                 id="nombre"
                                 class="form-control"
                                 maxlength="100"
                                 required>
-
                         </div>
-
-
                         <!-- DURACIÓN -->
-
                         <div class="col-md-6 mb-3">
-
                             <label for="duracion" class="form-label">
                                 Duración
                             </label>
-
                             <input
                                 type="text"
                                 id="duracion"
                                 class="form-control"
                                 placeholder="Ejemplo: 30 min"
                                 required>
-
                         </div>
-
-
                         <!-- PRECIO -->
-
                         <div class="col-md-6 mb-3">
-
                             <label for="precio" class="form-label">
                                 Precio
                             </label>
-
                             <input
                                 type="number"
                                 id="precio"
                                 class="form-control"
                                 min="0"
                                 required>
-
                         </div>
-
-
                         <!-- OBSERVACIONES -->
-
                         <div class="col-12 mb-3">
-
                             <label for="observaciones" class="form-label">
                                 Observaciones
                             </label>
-
                             <textarea
                                 id="observaciones"
                                 class="form-control"
                                 rows="4"
                                 maxlength="500"
                                 placeholder="Observaciones del servicio..."></textarea>
-
                         </div>
-
                     </div>
-
-
                     <!-- BOTONES -->
-
                     <div class="d-flex gap-2">
-
                         <button
                             type="submit"
                             class="btn btn-guardar">
-
                             Guardar cambios
-
                         </button>
-
                         <a
                             href="serviciosAd.html"
                             class="btn btn-cancelar">
-
                             Cancelar
-
                         </a>
-
                     </div>
-
                 </form>
-
             </div>
-
         </div>
-
     </main>
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
     <script src="editarServicioAd.js"></script>
-
 </body>
-
 </html>
-

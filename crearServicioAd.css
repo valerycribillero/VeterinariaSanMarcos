@@ -1,8 +1,6 @@
-
 /* =========================
    ESTILO GENERAL
 ========================= */
-
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -10,135 +8,102 @@ body {
     color: #333;
     min-height: 100vh;
 }
-
-
 /* =========================
    MENÚ LATERAL
 ========================= */
-
 aside {
     width: 250px !important;
     min-height: 100vh;
     background-color: white !important;
     border-right: 1px solid #ddd !important;
 }
-
 aside > a {
     color: #063d2f !important;
 }
-
 aside > a span {
     color: #063d2f !important;
 }
-
 aside > p {
     color: #777 !important;
 }
-
-
 /* =========================
    ENLACES DEL MENÚ
 ========================= */
-
 aside .nav-link {
     color: #333 !important;
     background-color: transparent !important;
     border-radius: 6px !important;
 }
-
 aside .nav-link:hover {
     background-color: #063d2f !important;
     color: white !important;
 }
-
 aside .nav-pills .nav-link.active {
     background-color: #063d2f !important;
     color: white !important;
     font-weight: bold;
 }
-
 aside .text-danger {
     color: #dc3545 !important;
 }
-
-
 /* =========================
    CONTENIDO
 ========================= */
-
 main {
     padding: 35px !important;
 }
-
 main h1 {
     color: #063d2f !important;
     font-size: 30px;
 }
-
 main > div:first-child p {
     color: #063d2f !important;
 }
-
-
 /* =========================
    ENCABEZADO
 ========================= */
-
 .encabezado {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
-
 /* =========================
    TARJETA
 ========================= */
-
 .card {
     border: none !important;
     border-radius: 10px !important;
     background-color: white !important;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
 }
-
 .card-body {
     padding: 25px !important;
 }
-
-
 /* =========================
    FORMULARIO
 ========================= */
-
 .form-label {
     color: #063d2f !important;
     font-weight: bold;
 }
-
 .form-control,
 .form-select {
     border: 1px solid #ddd !important;
     border-radius: 6px !important;
     padding: 10px !important;
 }
-
 .form-control:focus,
 .form-select:focus {
     border-color: #d99b43 !important;
     box-shadow: 0 0 0 0.15rem rgba(217, 155, 67, 0.25) !important;
 }
-
-
 /* =========================
    BOTONES
 ========================= */
-
 .botones {
     display: flex;
     gap: 10px;
 }
-
 .btn-guardar {
     background-color: #d99b43 !important;
     border-color: #d99b43 !important;
@@ -146,12 +111,10 @@ main > div:first-child p {
     padding: 8px 16px !important;
     border-radius: 6px !important;
 }
-
 .btn-guardar:hover {
     background-color: #063d2f !important;
     border-color: #063d2f !important;
 }
-
 .btn-cancelar {
     background-color: #777 !important;
     border-color: #777 !important;
@@ -159,43 +122,32 @@ main > div:first-child p {
     padding: 8px 16px !important;
     border-radius: 6px !important;
 }
-
 .btn-cancelar:hover {
     background-color: #063d2f !important;
     border-color: #063d2f !important;
 }
-
-
 /* =========================
    RESPONSIVE
 ========================= */
-
 @media (max-width: 768px) {
-
     body {
         display: block !important;
     }
-
     aside {
         width: 100% !important;
         min-height: auto !important;
     }
-
     main {
         padding: 20px !important;
     }
-
     main h1 {
         font-size: 25px;
     }
-
     .encabezado {
         display: block;
     }
-
     .botones {
         display: flex;
         flex-wrap: wrap;
     }
 }
-
