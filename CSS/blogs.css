@@ -1,0 +1,33 @@
+
+/* Botones Dorados */
+.btn-gold {
+    background-color: #d99b43;
+    border-color: #d99b43;
+    color: #ffffff;
+}
+
+.btn-gold:hover, 
+.btn-gold:focus, 
+.btn-gold:active {
+    background-color: #c48937;
+    border-color: #c48937;
+    color: #ffffff;
+}
+
+/* Colores de títulos principales */
+.main-title,
+.blog-title {
+    color: #063d2f;
+}
+
+/* Formato e imágenes de las tarjetas de blog */
+.blog-card-img {
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Estilos adicionales del footer si se requieren en este módulo */
+.footer {
+    background-color: #f8f9fa;
+    margin-top: auto;
+}
