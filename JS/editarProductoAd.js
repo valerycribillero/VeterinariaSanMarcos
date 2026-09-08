@@ -52,3 +52,10 @@ formulario.addEventListener("submit", function(event) {
     alert("Producto actualizado correctamente.");
     window.location.href = "admin.html";
 });
+/* =========================
+   CERRAR SESIÓN
+========================= */
+function cerrarSesion() {
+    localStorage.removeItem("usuarioActual");
+    window.location.href = "../HTML/veterinaria.html";
+}

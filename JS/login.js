@@ -1,31 +1,123 @@
-function ingresar(){
+/* =========================
+   USUARIOS POR DEFECTO
+========================= */
+
+let usuarios = JSON.parse(
+    localStorage.getItem("usuarios")
+) || [];
+
+/* Crear Administrador */
+
+let existeAdministrador = usuarios.some(function(usuario) {
+    return usuario.correo === "admin@gmail.com";
+});
+
+if (!existeAdministrador) {
+    usuarios.push({
+        run: "11111111-1",
+        nombre: "Administrador",
+        apellidos: "Principal",
+        correo: "admin@gmail.com",
+        password: "1234",
+        telefono: "",
+        rol: "Administrador",
+        region: "Libertador General Bernardo O'Higgins",
+        comuna: "Rancagua",
+        direccion: ""
+    });
+}
+
+/* Crear Vendedor */
+
+let existeVendedor = usuarios.some(function(usuario) {
+    return usuario.correo === "vendedor@duoc.cl";
+});
+
+if (!existeVendedor) {
+    usuarios.push({
+        run: "22222222-2",
+        nombre: "Vendedor",
+        apellidos: "Principal",
+        correo: "vendedor@duoc.cl",
+        password: "1234",
+        telefono: "",
+        rol: "Vendedor",
+        region: "Libertador General Bernardo O'Higgins",
+        comuna: "Rancagua",
+        direccion: ""
+    });
+}
+
+/* Crear Cliente */
+
+let existeCliente = usuarios.some(function(usuario) {
+    return usuario.correo === "cliente@profesor.duoc.cl";
+});
+
+if (!existeCliente) {
+    usuarios.push({
+        run: "33333333-3",
+        nombre: "Cliente",
+        apellidos: "Principal",
+        correo: "cliente@profesor.duoc.cl",
+        password: "1234",
+        telefono: "",
+        rol: "Cliente",
+        region: "Libertador General Bernardo O'Higgins",
+        comuna: "Rancagua",
+        direccion: ""
+    });
+}
+
+/* Guardar usuarios */
+
+localStorage.setItem(
+    "usuarios",
+    JSON.stringify(usuarios)
+);
+
+/* =========================
+   INICIAR SESIÓN
+========================= */
+
+function ingresar() {
     let correo = document.getElementById("correo").value.trim();
     let clave = document.getElementById("clave").value;
 
-    if (correo === "") {
-        alert("El correo es obligatorio.");
-    } else if (correo.length > 100) {
-        alert("El correo no puede superar los 100 caracteres.");
+    if (correo === "" || clave === "") {
+        alert("Debes ingresar correo y contraseña.");
+        return;
+    }
 
-    } else if (
-        !correo.endsWith("@duoc.cl") &&
-        !correo.endsWith("@profesor.duoc.cl") &&
-        !correo.endsWith("@gmail.com")
-    ) {
-        alert("El correo debe ser @duoc.cl, @profesor.duoc.cl o @gmail.com.");
+    let usuarioEncontrado = null;
 
-    } else if (clave === "") {
-        alert("La contraseña es obligatoria.");
-    } else if (clave.length < 4 || clave.length > 10) {
-        alert("La contraseña debe tener entre 4 y 10 caracteres.");
+    for (let i = 0; i < usuarios.length; i++) {
+        if (
+            usuarios[i].correo.toLowerCase() === correo.toLowerCase() &&
+            usuarios[i].password === clave
+        ) {
+            usuarioEncontrado = usuarios[i];
+            break;
+        }
+    }
 
-    } else if (correo === "adri@gmail.com" && clave === "1234") {
-        window.location.href = "veterinaria.html"; // se debe hacer una pantalla de usuario
+    if (!usuarioEncontrado) {
+        alert("Correo o contraseña incorrectos.");
+        return;
+    }
 
-    } else if (correo === "usuario@demo.cl" && clave === "5678") {
-        window.location.href = "usuario.html";
+    localStorage.setItem(
+        "usuarioActual",
+        JSON.stringify(usuarioEncontrado)
+    );
 
+    if (usuarioEncontrado.rol === "Administrador") {
+        window.location.href = "admin.html";
+    } else if (usuarioEncontrado.rol === "Vendedor") {
+        window.location.href = "vendedor.html";
+    } else if (usuarioEncontrado.rol === "Cliente") {
+        window.location.href = "veterinaria.html";
     } else {
-        alert("Hubo un error al intentar ingresar.");
+        alert("El usuario no tiene un rol válido.");
     }
 }

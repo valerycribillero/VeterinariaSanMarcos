@@ -112,3 +112,11 @@ if (!usuarioEditar) {
         window.location.href = "usuariosAd.html";
     });
 }
+/* =========================
+   CERRAR SESIÓN
+========================= */
+
+function cerrarSesion() {
+    localStorage.removeItem("usuarioActual");
+    window.location.href = "../HTML/veterinaria.html";
+}

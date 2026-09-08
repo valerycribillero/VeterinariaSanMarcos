@@ -1,50 +1,86 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Higiene Dental Canina - Veterinaria San Marcos</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/blog1.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
 </head>
 <body>
-
     <!-- HEADER GLOBAL -->
     <header>
         <nav class="navbar navbar-expand-lg bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="HTML/veterinaria.html">
-                    <img src="img/logo.png" alt="Logo" width="45" height="45" class="me-2">
-                    <span class="fw-bold">Veterinaria san Marcos</span>
+                <a class="navbar-brand d-flex align-items-center" href="../HTML/veterinaria.html">
+                    <img src="../img/logo.png"
+                        alt="Logo"
+                        width="45"
+                        height="45"
+                        class="me-2">
+
+                    <span class="fw-bold">
+                        Veterinaria San Marcos
+                    </span>
                 </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+                <!-- para que se pueda ver bien en celu -->
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#menuPrincipal">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
+                <!-- menu -->
                 <div class="collapse navbar-collapse" id="menuPrincipal">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="HTML/servicios.html">Servicios</a>
+                            <a class="nav-link" href="../HTML/servicios.html">
+                                Servicios
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="HTML/nosotros.html">Equipo</a>
+                            <a class="nav-link" href="../HTML/nosotros.html">
+                                Equipo
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="HTML/contacto.html">Contacto</a>
+                            <a class="nav-link" href="../HTML/contacto.html">
+                                Contacto
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="HTML/blogs.html">Blog</a>
+                            <a class="nav-link" href="../HTML/blogs.html">
+                                Blog
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../HTML/tienda.html">
+                                Tienda
+                            </a>
                         </li>
                     </ul>
 
-                    <a href="HTML/login.html" class="btn btn-primary" style="background-color: #d99b43; border-color: #d99b43;">
+                    <!-- Botón Login -->
+                    <a href="../HTML/login.html"
+                        class="btn btn-primary"
+                        style="background-color: #d99b43; border-color: #d99b43;">
                         Iniciar sesión
                     </a>
-                    <a href="HTML/cita.html" class="btn btn-primary ms-2" style="background-color: #d99b43; border-color: #d99b43;">
+
+                    <a href="../HTML/cita.html"
+                        class="btn btn-primary ms-2"
+                        style="background-color: #d99b43; border-color: #d99b43;">
                         Reservar cita
                     </a>
-                    <a href="HTML/carrito.html" class="btn btn-carrito ms-2">
+
+                    <a href="../HTML/carrito.html" class="btn btn-carrito ms-2">
                         🛒
                         <span id="contadorCarrito"></span>
                     </a>
@@ -53,76 +89,146 @@
         </nav>
     </header>
 
-    <main class="container my-5" style="max-width: 850px;">
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container my-5 blog-detail-container">
         <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="HTML/blogs.html" class="text-decoration-none" style="color: #d99b43;">← Volver al Blog</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Higiene Dental Canina</li>
+                <li class="breadcrumb-item">
+                    <a href="../HTML/blogs.html"
+                        class="text-decoration-none breadcrumb-link">
+                        ← Volver al Blog
+                    </a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                    Higiene Dental Canina
+                </li>
             </ol>
         </nav>
 
         <article class="bg-white p-4 p-md-5 rounded-3 shadow-sm">
-            <h1 class="fw-bold mb-3" style="color: #063d2f;">La importancia de la higiene dental en perros</h1>
-            <p class="text-muted small">Publicado por el Equipo Veterinario | Rancagua</p>
+            <h1 class="fw-bold mb-3 article-title">
+                La importancia de la higiene dental en perros
+            </h1>
 
-            <img src="img/perrocepillo.jpg" class="img-fluid rounded-3 my-4 w-100" alt="Higiene Dental Canina Principal" style="max-height: 400px; object-fit: cover;">
+            <p class="text-muted small">
+                Publicado por el Equipo Veterinario | Rancagua
+            </p>
 
-            <h3 class="fw-bold mt-4" style="color: #063d2f;">¿Por qué es vital la salud oral de tu perro?</h3>
+            <img src="../img/perrocepillo.jpg"
+                class="img-fluid rounded-3 my-4 w-100 main-article-img"
+                alt="Higiene Dental Canina Principal">
+
+            <h3 class="fw-bold mt-4 article-subtitle">
+                ¿Por qué es vital la salud oral de tu perro?
+            </h3>
+
             <p class="text-secondary leading-relaxed">
                 A menudo olvidamos que los dientes y encías de nuestras mascotas requieren la misma atención médica que la de los humanos. La acumulación de restos de comida genera placa bacteriana que, al endurecerse, se convierte en sarro. Si este no se trata a tiempo, causa gingivitis, retracción de encías y dolor intenso al comer.
             </p>
 
-            <!-- IMAGEN ADICIONAL DE MÁS INFORMACIÓN -->
             <div class="my-4 text-center">
-                <img src="img/perrodientes.jpg" class="img-fluid rounded-3 border" alt="Detalle Limpieza Dental" style="max-height: 350px; object-fit: cover;">
-                <p class="text-muted small mt-2"><em>Imagen detallada: Revisión dental en perro adulto.</em></p>
+                <img src="../img/perrodientes.jpg"
+                    class="img-fluid rounded-3 border detail-article-img"
+                    alt="Detalle Limpieza Dental">
+
+                <p class="text-muted small mt-2">
+                    <em>Imagen detallada: Revisión dental en perro adulto.</em>
+                </p>
             </div>
 
-            <h3 class="fw-bold mt-4" style="color: #063d2f;">Consecuencias en la salud general</h3>
+            <h3 class="fw-bold mt-4 article-subtitle">
+                Consecuencias en la salud general
+            </h3>
+
             <p class="text-secondary">
-                Las bacterias acumuladas en la boca de tu perro no se quedan solamente allí. A través del torrente sanguíneo, pueden desplazarse hacia órganos vitales como el **corazón, el hígado y los riñones**, provocando patologías graves a largo plazo que disminuyen drásticamente su esperanza de vida.
+                Las bacterias acumuladas en la boca de tu perro no se quedan solamente allí. A través del torrente sanguíneo, pueden desplazarse hacia órganos vitales como el
+                <strong>corazón, el hígado y los riñones</strong>,
+                provocando patologías graves a largo plazo que disminuyen drásticamente su esperanza de vida.
             </p>
 
-            <h3 class="fw-bold mt-4" style="color: #063d2f;">Consejos de Prevención Diaria</h3>
+            <h3 class="fw-bold mt-4 article-subtitle">
+                Consejos de Prevención Diaria
+            </h3>
+
             <ul class="text-secondary">
-                <li><strong>Cepillado regular:</strong> Utiliza siempre pasta de dientes formulada específicamente para perros (nunca pasta humana).</li>
-                <li><strong>Snacks y juguetes dentales:</strong> Ayudan a remover mecánicamente la placa más blanda.</li>
-                <li><strong>Revisiones periódicas:</strong> Trae a tu perro a **Veterinaria San Marcos** para una profilaxis ultrasónica cuando el dentista lo aconseje.</li>
+                <li>
+                    <strong>Cepillado regular:</strong>
+                    Utiliza siempre pasta de dientes formulada específicamente para perros (nunca pasta humana).
+                </li>
+                <li>
+                    <strong>Snacks y juguetes dentales:</strong>
+                    Ayudan a remover mecánicamente la placa más blanda.
+                </li>
+                <li>
+                    <strong>Revisiones periódicas:</strong>
+                    Trae a tu perro a <strong>Veterinaria San Marcos</strong> para una profilaxis ultrasónica cuando el dentista lo aconseje.
+                </li>
             </ul>
 
-            <div class="mt-5 p-4 rounded-3 text-center" style="background-color: #f8f9fa; border-left: 5px solid #d99b43;">
-                <h5 class="fw-bold mb-2" style="color: #063d2f;">¿Notas mal aliento en tu mascota?</h5>
-                <p class="text-secondary mb-3">Agenda una evaluación dental hoy mismo con nuestros especialistas.</p>
-                <a href="HTML/cita.html" class="btn btn-primary" style="background-color: #d99b43; border-color: #d99b43;">Reservar Cita Médica</a>
+            <div class="mt-5 p-4 rounded-3 text-center callout-box">
+                <h5 class="fw-bold mb-2 callout-title">
+                    ¿Notas mal aliento en tu mascota?
+                </h5>
+
+                <p class="text-secondary mb-3">
+                    Agenda una evaluación dental hoy mismo con nuestros especialistas.
+                </p>
+
+                <a href="../HTML/cita.html" class="btn btn-gold">
+                    Reservar Cita Médica
+                </a>
             </div>
         </article>
     </main>
 
-    <!-- FOOTER MULTICOLUMNA -->
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="container py-4">
             <div class="footer-contenido row g-4">
                 <div class="footer-columna col-md-4">
-                    <h3 class="fw-bold">Veterinaria San Marcos</h3>
-                    <p>Cuidando la salud de tus mascotas desde 2009 en Rancagua.</p>
+                    <h3 class="fw-bold">
+                        Veterinaria San Marcos
+                    </h3>
+                    <p>
+                        Cuidando la salud de tus mascotas desde 2009 en Rancagua.
+                    </p>
                 </div>
+
                 <div class="footer-columna col-md-4">
-                    <h3 class="fw-bold">Horario</h3>
-                    <p>Lunes - Viernes: 13:30 - 19:30<br>Sábados: 9:00 - 13:00<br>Domingo: Cerrado</p>
+                    <h3 class="fw-bold">
+                        Horario
+                    </h3>
+                    <p>
+                        Lunes - Viernes: 13:30 - 19:30<br>
+                        Sábados: 9:00 - 13:00<br>
+                        Domingo: Cerrado
+                    </p>
                 </div>
+
                 <div class="footer-columna col-md-4">
-                    <h3 class="fw-bold">Contacto</h3>
-                    <p>📍 Av. Brasil 2140, Rancagua<br>📞 +56 9 1234 5678<br>✉️ contacto@veterinariasanmarcos.cl</p>
+                    <h3 class="fw-bold">
+                        Contacto
+                    </h3>
+                    <p>
+                        📍 Av. Brasil 2140, Rancagua<br>
+                        📞 +56 9 1234 5678<br>
+                        ✉️ contacto@veterinariasanmarcos.cl
+                    </p>
                 </div>
             </div>
+
             <hr class="my-3 text-muted">
+
             <div class="footer-abajo text-center text-muted">
                 © 2026 Veterinaria San Marcos. Todos los derechos reservados.
             </div>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="JS/app-integration.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="../JS/app-integration.js"></script>
 </body>
 </html>
+
