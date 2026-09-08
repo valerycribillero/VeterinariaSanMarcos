@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Veterinaria San Marcos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/productoAd.css">
+    <link rel="stylesheet" href="/CSS/menuAd.css">
+</head>
+<body class="d-flex bg-light">
+    <!-- Menú vertical -->
+    <aside class="p-3 d-flex flex-column">
+        <a href="/HTML/admin.html" class="d-flex align-items-center gap-2 text-decoration-none mb-4">
+            <img src="/img/logo.png" alt="Logo Veterinaria San Marcos" width="45" height="45">
+            <span class="fw-bold">Veterinaria<br>San Marcos</span>
+        </a>
+        <p class="text-uppercase small mb-2">Administración</p>
+        <ul class="nav nav-pills flex-column">
+            <li class="nav-item">
+                <a href="/HTML/admin.html" class="nav-link">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a href="/HTML/usuariosAd.html" class="nav-link">Usuarios</a>
+            </li>
+            <li class="nav-item">
+                <a href="/HTML/productoAd.html" class="nav-link active">Productos</a>
+            </li>
+            <li class="nav-item">
+                <a href="/HTML/serviciosAd.html" class="nav-link">Servicios</a>
+            </li>
+            <li class="nav-item">
+                <a href="/HTML/mensajesAd.html" class="nav-link">Mensajes</a>
+            </li>
+            <li class="nav-item">
+                <a href="/HTML/rolesAd.html" class="nav-link">Roles</a>
+            </li>
+        </ul>
+        <div class="mt-auto">
+            <hr>
+            <ul class="nav nav-pills flex-column">
+                <li class="nav-item">
+                    <a href="/HTML/perfilAdmin.html" class="nav-link">Mi perfil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/HTML/index.html" class="nav-link text-danger">Cerrar sesión</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <!-- Contenido -->
+    <main class="flex-grow-1">
+        <div class="encabezado">
+            <div>
+                <h1>Productos</h1>
+                <p>Gestiona los productos disponibles en la veterinaria.</p>
+            </div>
+            <a href="/HTML/crearProductoAd.html" class="btn btn-primary">
+                Nuevo producto
+            </a>
+        </div>
+        <!-- Tabla de productos -->
+        <div class="card mt-4">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Categoría</th>
+                                <th>Nombre comercial</th>
+                                <th>Principio activo</th>
+                                <th>Presentación</th>
+                                <th>Especie</th>
+                                <th>Stock</th>
+                                <th>Precio</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaProductos"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="/JS/productoAd.js"></script>
+</body>
+</html>
