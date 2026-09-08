@@ -151,3 +151,11 @@ formulario.addEventListener("submit", function(event) {
     // =========================
     formulario.reset();
 });
+/* =========================
+   CERRAR SESIÓN
+========================= */
+
+function cerrarSesion() {
+    localStorage.removeItem("usuarioActual");
+    window.location.href = "../HTML/veterinaria.html";
+}

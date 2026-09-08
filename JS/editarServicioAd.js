@@ -127,3 +127,10 @@ if (!servicioEditar) {
         window.location.href = "serviciosAd.html";
     });
 }
+/* =========================
+   CERRAR SESIÓN
+========================= */
+function cerrarSesion() {
+    localStorage.removeItem("usuarioActual");
+    window.location.href = "../HTML/veterinaria.html";
+}

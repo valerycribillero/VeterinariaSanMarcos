@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cirugia</title>
-    <link rel="stylesheet" href="todosServ.css">
-    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="../CSS/todosServ.css">
+    <link rel="stylesheet" href="../CSS/header.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
 </head>
@@ -13,14 +13,14 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand d-flex align-items-center" href="veterinaria.html">
-                    <img src="img/logo1.png"
+                <a class="navbar-brand d-flex align-items-center" href="../HTML/veterinaria.html">
+                    <img src="../img/logo.png"
                         alt="Logo"
                         width="45"
                         height="45"
                         class="me-2">
 
-                    <span class="fw-bold" href="veterinaria.html">Veterinaria san Marcos</span>
+                    <span class="fw-bold" href="../HTML/veterinaria.html">Veterinaria san Marcos</span>
                 </a>
 
                 <!-- para que se pueda ver bien en celu -->
@@ -35,25 +35,31 @@
                 <div class="collapse navbar-collapse" id="menuPrincipal">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="servicios.html">Servicios</a>
+                            <a class="nav-link" href="../HTML/servicios.html">Servicios</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Equipo</a>
+                            <a class="nav-link" href="../HTML/nosotros">Equipo</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
+                            <a class="nav-link" href="../HTML/contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../HTML/blogs.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../HTML/tienda.html">Tienda</a>
                         </li>
 
                     </ul>
 
                     <!-- Botón Login -->
-                    <a href="login.html" class="btn btn-primary" style="background-color: #d99b43; border-color: #d99b43;">
+                    <a href="../HTML/login.html" class="btn btn-primary" style="background-color: #d99b43; border-color: #d99b43;">
                         Iniciar sesión
                     </a>
-                    <a href="cita.html" class="btn btn-primary ms-2" style="background-color: #d99b43; border-color: #d99b43;">
+                    <a href="../HTML/cita.html" class="btn btn-primary ms-2" style="background-color: #d99b43; border-color: #d99b43;">
                         Reservar cita
                     </a>
-                    <a href="carrito.html" class="btn btn-carrito ms-2">
+                    <a href="../HTML/carrito.html" class="btn btn-carrito ms-2">
                         🛒
                         <span id="contadorCarrito"></span>
                     </a>
@@ -66,7 +72,7 @@
     <h1 style="text-align: center; margin: 20px;">Tipos de cirugias disponibles</h1>
 
     <div id="listaCirugias"></div>
-    <script src="cirugia.js"></script>
+    <script src="../JS/cirugia.js"></script>
 
     <footer class="footer">
         <div class="footer-contenido">

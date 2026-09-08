@@ -143,3 +143,7 @@ function mostrarUsuarios() {
         `;
     }
 }
+function cerrarSesion() {
+    localStorage.removeItem("usuarioActual");
+    window.location.href = "../HTML/veterinaria.html";
+}

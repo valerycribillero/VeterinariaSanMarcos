@@ -16,4 +16,10 @@ if (usuarioActual.rol !== "Administrador") {
     alert("No tienes permiso para acceder a esta página.");
     window.location.href = "vendedor.html";
 }
-
+/* =========================
+   CERRAR SESIÓN
+========================= */
+function cerrarSesion() {
+    localStorage.removeItem("usuarioActual");
+    window.location.href = "../HTML/veterinaria.html";
+}

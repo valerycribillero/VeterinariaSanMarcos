@@ -1,0 +1,80 @@
+.navbar {
+    min-height: 55px;
+}
+
+.navbar-brand {
+    font-size: 13px;
+}
+
+.nav-link {
+    font-size: 12px;
+}
+/* Botones Dorados */
+.btn-gold {
+    background-color: #d99b43;
+    border-color: #d99b43;
+    color: #ffffff;
+}
+
+.btn-gold:hover, 
+.btn-gold:focus, 
+.btn-gold:active {
+    background-color: #c48937;
+    border-color: #c48937;
+    color: #ffffff;
+}
+
+/* Colores de títulos principales */
+.main-title,
+.blog-title {
+    color: #063d2f;
+}
+
+/* Formato e imágenes de las tarjetas de blog */
+.blog-card-img {
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Estilos adicionales del footer si se requieren en este módulo */
+.footer {
+    background-color: #063d2f;
+    color: white;
+    padding: 35px 20px 15px;
+    margin-top: 40px;
+}
+
+.footer-contenido {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-columna {
+    flex: 1;
+}
+
+.footer-columna h3 {
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-columna p {
+    font-size: 10px;
+    line-height: 1.7;
+    color: #c5d9d3;
+    margin: 0;
+}
+
+.footer-abajo {
+    max-width: 900px;
+    margin: 20px auto 0;
+    padding-top: 15px;
+    border-top: 1px solid #1c5949;
+    text-align: center;
+    font-size: 9px;
+    color: #8fb2a8;
+}

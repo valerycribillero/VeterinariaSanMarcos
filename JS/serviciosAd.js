@@ -361,3 +361,11 @@ function editarServicio(id) {
     );
     window.location.href = "editarServicioAd.html";
 }
+/* =========================
+   CERRAR SESIÓN
+========================= */
+
+function cerrarSesion() {
+    localStorage.removeItem("usuarioActual");
+    window.location.href = "../HTML/veterinaria.html";
+}

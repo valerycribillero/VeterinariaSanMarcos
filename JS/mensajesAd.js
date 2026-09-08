@@ -1,43 +1,84 @@
-javascript
-const tablaMensajes = document.getElementById('tablaMensajes');
-let mensajes = JSON.parse(localStorage.getItem('mensajesContacto')) || [];
+
+/* =========================
+   MENSAJES DE CONTACTO
+========================= */
+
+let tablaMensajes = document.getElementById("tablaMensajes");
+
+let mensajes = JSON.parse(
+    localStorage.getItem("mensajesContacto")
+) || [];
+
+/* =========================
+   MOSTRAR MENSAJES
+========================= */
+
 function mostrarMensajes() {
-    tablaMensajes.innerHTML = '';
+
+    tablaMensajes.innerHTML = "";
+
     if (mensajes.length === 0) {
+
         tablaMensajes.innerHTML = `
             <tr>
-                <td colspan="4" class="text-center text-muted">
+                <td colspan="5" class="text-center text-muted">
                     No hay mensajes de contacto.
                 </td>
             </tr>
         `;
+
         return;
     }
-    mensajes.forEach((mensaje, index) => {
-        const fila = document.createElement('tr');
-        fila.innerHTML = `
-            <td>${mensaje.nombre}</td>
-            <td>${mensaje.correo}</td>
-            <td>${mensaje.comentario}</td>
-            <td>
-                <button 
-                    class="btn btn-sm btn-danger"
-                    onclick="eliminarMensaje(${index})">
-                    Eliminar
-                </button>
-            </td>
+
+    for (let i = 0; i < mensajes.length; i++) {
+
+        tablaMensajes.innerHTML += `
+            <tr>
+                <td>${mensajes[i].nombre}</td>
+                <td>${mensajes[i].correo}</td>
+                <td>${mensajes[i].comentario}</td>
+                <td>${mensajes[i].fecha || "Sin fecha"}</td>
+                <td>
+                    <button
+                        class="btn btn-danger btn-sm"
+                        onclick="eliminarMensaje(${i})">
+                        Eliminar
+                    </button>
+                </td>
+            </tr>
         `;
-        tablaMensajes.appendChild(fila);
-    });
+    }
 }
+
+/* =========================
+   ELIMINAR MENSAJE
+========================= */
+
 function eliminarMensaje(index) {
-    if (confirm('¿Quieres eliminar este mensaje?')) {
+
+    if (confirm("¿Quieres eliminar este mensaje?")) {
+
         mensajes.splice(index, 1);
+
         localStorage.setItem(
-            'mensajesContacto',
+            "mensajesContacto",
             JSON.stringify(mensajes)
         );
+
         mostrarMensajes();
     }
 }
+
+/* =========================
+   CERRAR SESIÓN
+========================= */
+
+function cerrarSesion() {
+
+    localStorage.removeItem("usuarioActual");
+
+    window.location.href = "veterinaria.html";
+}
+
 mostrarMensajes();
+
