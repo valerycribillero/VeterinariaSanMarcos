@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de roles | Veterinaria San Marcos</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+    <!-- CSS de esta página -->
+    <link rel="stylesheet" href="../CSS/rolesAd.css">
+    <!-- CSS común del menú -->
+    <link rel="stylesheet" href="../CSS/menuAd.css">
+</head>
+<body class="d-flex bg-light">
+    <!-- =========================
+        MENÚ VERTICAL
+        ========================= -->
+    <aside>
+        <!-- Logo -->
+        <a href="../HTML/admin.html">
+            <img src="../img/logo.png"
+                alt="Logo Veterinaria San Marcos"
+                width="45"
+                height="45">
+            <span>
+                Veterinaria<br>
+                San Marcos
+            </span>
+        </a>
+        <!-- Título -->
+        <p>
+            Administración
+        </p>
+        <!-- Menú principal -->
+        <ul>
+            <li>
+                <a href="../HTML/admin.html">
+                    Inicio
+                </a>
+            </li>
+            <li>
+                <a href="../HTML/usuariosAd.html">
+                    Usuarios
+                </a>
+            </li>
+            <li>
+                <a href="../HTML/productoAd.html">
+                    Productos
+                </a>
+            </li>
+            <li>
+                <a href="../HTML/serviciosAd.html">
+                    Servicios
+                </a>
+            </li>
+            <li>
+                <a href="../HTML/mensajesAd.html">
+                    Mensajes
+                </a>
+            </li>
+            <li>
+                <a href="../HTML/rolesAd.html" class="active">
+                    Roles
+                </a>
+            </li>
+        </ul>
+        <!-- Menú inferior -->
+        <div>
+            <hr>
+            <ul>
+                <li>
+                    <a href="../HTML/perfilAdmin.html">
+                        Mi perfil
+                    </a>
+                </li>
+                <li>
+                    <a href="../HTML/veterinaria.html">
+                        Cerrar sesión
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <!-- =========================
+         CONTENIDO PRINCIPAL
+         ========================= -->
+    <main class="flex-grow-1 p-4">
+        <!-- Encabezado -->
+        <div class="mb-4">
+            <h1 class="h3">
+                Administración de roles
+            </h1>
+            <p class="text-muted">
+                Gestiona los roles de los usuarios de la veterinaria.
+            </p>
+        </div>
+        <!-- Mensaje -->
+        <div id="mensajeExito"
+            class="alert alert-success"
+            style="display: none;">
+        </div>
+        <!-- =========================
+             TABLA DE USUARIOS
+             ========================= -->
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+                <h5 class="mb-3">
+                    Usuarios y roles
+                </h5>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                                <th>Rol actual</th>
+                                <th>Nuevo rol</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaRoles">
+                            <!-- Los usuarios aparecerán aquí -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript -->
+    <script src="../JS/rolesAd.js"></script>
+</body>
+</html>

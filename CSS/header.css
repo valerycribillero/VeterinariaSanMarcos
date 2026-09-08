@@ -1,0 +1,36 @@
+/* =========================================
+   HEADER - NAVEGACIÓN
+========================================= */
+
+.navbar .nav-link {
+    color: #063b2c !important;
+    font-weight: 500;
+}
+
+
+/* Cuando pasas el mouse */
+
+.navbar .nav-link:hover {
+    color: #d99b43 !important;
+}
+
+
+/* Cuando haces click / queda activo */
+
+.navbar .nav-link:active {
+    color: #d99b43 !important;
+}
+
+
+/* Cuando el enlace recibe focus */
+
+.navbar .nav-link:focus {
+    color: #d99b43 !important;
+}
+
+
+/* Si Bootstrap lo marca como activo */
+
+.navbar .nav-link.active {
+    color: #d99b43 !important;
+}

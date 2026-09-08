@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesión</title>
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/login.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="../HTML/veterinaria.html">
+                    <img src="../img/logo.png"
+                        alt="Logo"
+                        width="45"
+                        height="45"
+                        class="me-2">
+
+                    <span class="fw-bold" href="../HTML/veterinaria.html">Veterinaria san Marcos</span>
+                </a>
+
+                <!-- para que se pueda ver bien en celu -->
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#menuPrincipal">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- menu -->
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../HTML/servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../HTML/nosotros.html">Equipo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../HTML/contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../HTML/blogs.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../HTML/tienda.html">Tienda</a>
+                        </li>
+
+                    </ul>
+
+                    <!-- Botón Login -->
+                    <a href="../HTML/login.html" class="btn btn-primary" style="background-color: #d99b43; border-color: #d99b43;">
+                        Iniciar sesión
+                    </a>
+                    <a href="../HTML/cita.html" class="btn btn-primary ms-2" style="background-color: #d99b43; border-color: #d99b43;">
+                        Reservar cita
+                    </a>
+                    <a href="../HTML/carrito.html" class="btn btn-carrito ms-2">
+                        🛒
+                        <span id="contadorCarrito"></span>
+                    </a>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main class="login">
+        <h1>Inicio de sesión</h1>
+        <form onsubmit="ingresar(); return false;">
+            <div class="form-group">
+                <label for="correo">Correo:</label>
+                <input
+                    type="email"
+                    class="form-control"
+                    id="correo"
+                    maxlength="100"
+                >
+            </div>
+
+
+            <div class="form-group">
+                <label for="clave">Clave:</label>
+                <input
+                    type="password"
+                    class="form-control"
+                    id="clave"
+                    minlength="4"
+                    maxlength="10"
+                    placeholder="Ingresa tu contraseña"
+                    required
+                >
+            </div>
+
+
+            <div class="form-check">
+                <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="exampleCheck1"
+                >
+                <label class="form-check-label" for="exampleCheck1">
+                    Mantenme ingresado
+                </label>
+            </div>
+
+            <button type="submit">
+                Ingresar
+            </button>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-contenido">
+            <div class="footer-columna">
+                <h3>🐾 Veterinaria San Marcos</h3>
+                <p>
+                    Cuidando la salud de tus mascotas
+                    desde 2009 en Rancagua.
+                </p>
+            </div>
+            <div class="footer-columna">
+                <h3>Horario</h3>
+                <p>
+                    Lunes - Viernes: 13:30 - 19:30
+                    <br>
+                    Sábados: 9:00 - 13:00
+                    <br>
+                    Domingo: Cerrado
+                </p>
+            </div>
+
+            <div class="footer-columna">
+                <h3>Contacto</h3>
+                <p>
+                    📍 Av. Brasil 2140, Rancagua
+                    <br>
+                    📞 +56 9 1234 5678
+                    <br>
+                    ✉ contacto@veterinariasanmarcos.cl
+                </p>
+            </div>
+        </div>
+        <div class="footer-abajo">
+            © 2026 Veterinaria San Marcos.
+            Todos los derechos reservados.
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="../JS/login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+
+/* Contenedor del Formulario */
+.contact-container {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+}
+
+/* Título del Formulario */
+.form-title {
+    color: #063d2f;
+}
+
+/* Botones Dorados */
+.btn-gold {
+    background-color: #d99b43;
+    border-color: #d99b43;
+    color: #ffffff;
+}
+
+.btn-gold:hover, 
+.btn-gold:focus, 
+.btn-gold:active {
+    background-color: #c48937;
+    border-color: #c48937;
+    color: #ffffff;
+}
+
+/* Mensajes de error en la validación de JS */
+.error-msg {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+/* Pie de página */
+.footer {
+    background-color: #063d2f;
+    color: white;
+    padding: 35px 20px 15px;
+    margin-top: 40px;
+}
+
+.footer-contenido {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-columna {
+    flex: 1;
+}
+
+.footer-columna h3 {
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-columna p {
+    font-size: 10px;
+    line-height: 1.7;
+    color: #c5d9d3;
+    margin: 0;
+}
+
+.footer-abajo {
+    max-width: 900px;
+    margin: 20px auto 0;
+    padding-top: 15px;
+    border-top: 1px solid #1c5949;
+    text-align: center;
+    font-size: 9px;
+    color: #8fb2a8;
+}.footer {
+    background-color: #063d2f;
+    color: white;
+    padding: 35px 20px 15px;
+    margin-top: 40px;
+}
+
+.footer-contenido {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-columna {
+    flex: 1;
+}
+
+.footer-columna h3 {
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-columna p {
+    font-size: 10px;
+    line-height: 1.7;
+    color: #c5d9d3;
+    margin: 0;
+}
+
+.footer-abajo {
+    max-width: 900px;
+    margin: 20px auto 0;
+    padding-top: 15px;
+    border-top: 1px solid #1c5949;
+    text-align: center;
+    font-size: 9px;
+    color: #8fb2a8;
+}

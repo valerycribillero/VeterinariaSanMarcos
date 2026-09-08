@@ -1,0 +1,245 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f2;
+    color: #163a31;
+}
+
+.navbar {
+    background-color: white !important;
+    padding: 10px 0;
+}
+
+.navbar-brand {
+    color: #123c31 !important;
+    font-size: 15px;
+}
+
+.nav-link {
+    color: #23443b !important;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 8px;
+}
+
+.nav-link:hover {
+    color: #d99b43 !important;
+}
+
+.btn-login,
+.btn-cita {
+    background-color: #d99b43 !important;
+    border-color: #d99b43 !important;
+    color: white !important;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 6px;
+    padding: 8px 14px;
+}
+
+.btn-login:hover,
+.btn-cita:hover {
+    background-color: #bd8030 !important;
+}
+
+.carrito-link {
+    text-decoration: none;
+    color: #163a31;
+    font-size: 20px;
+    position: relative;
+}
+
+.carrito-link:hover {
+    color: #d99b43;
+}
+
+#cantidadCarrito {
+    background-color: #d99b43;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 50%;
+    min-width: 18px;
+    height: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -8px;
+    right: -10px;
+}
+
+.contenedor-detalle {
+    width: 100%;
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.detalle-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.icono-producto {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.detalle-card h1 {
+    color: #10392f;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.detalle-card h2 {
+    color: #163a31;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.informacion-producto {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.dato {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 13px;
+}
+
+.dato strong {
+    color: #163a31;
+}
+
+.dato span {
+    color: #68727a;
+    text-align: right;
+}
+
+.cantidad-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.cantidad-container label {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#cantidad {
+    width: 70px;
+    padding: 7px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.btn-agregar {
+    width: 100%;
+    padding: 11px;
+    border: none;
+    border-radius: 7px;
+    background-color: #d99b43;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-agregar:hover {
+    background-color: #bd8030;
+}
+
+.mensaje-carrito {
+    min-height: 20px;
+    margin: 12px 0;
+    color: #28704e;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.volver {
+    display: inline-block;
+    margin-top: 15px;
+    color: #163a31;
+    font-size: 13px;
+    text-decoration: none;
+}
+.volver:hover {
+    color: #d99b43;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .contenedor-detalle {
+        margin: 25px auto;
+    }
+    .detalle-card {
+        padding: 20px;
+    }
+    .dato {
+        flex-direction: column;
+        gap: 3px;
+    }
+    .dato span {
+        text-align: left;
+    }
+}
+.footer {
+    background-color: #063d2f;
+    color: white;
+    padding: 35px 20px 15px;
+    margin-top: 40px;
+}
+
+.footer-contenido {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-columna {
+    flex: 1;
+}
+
+.footer-columna h3 {
+    font-size: 13px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-columna p {
+    font-size: 10px;
+    line-height: 1.7;
+    color: #c5d9d3;
+    margin: 0;
+}
+
+.footer-abajo {
+    max-width: 900px;
+    margin: 20px auto 0;
+    padding-top: 15px;
+    border-top: 1px solid #1c5949;
+    text-align: center;
+    font-size: 9px;
+    color: #8fb2a8;
+}

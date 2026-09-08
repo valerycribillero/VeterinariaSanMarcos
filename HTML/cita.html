@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar cita | Veterinaria San Marcos</title>
+
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/cita.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+            <div class="container">
+
+                <a class="navbar-brand d-flex align-items-center" href="../HTML/veterinaria.html">
+                    <img src="../img/logo.png"
+                        alt="Logo Veterinaria San Marcos"
+                        width="45"
+                        height="45"
+                        class="me-2">
+
+                    <span class="fw-bold">Veterinaria San Marcos</span>
+                </a>
+
+                <!-- Menú para celular -->
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#menuPrincipal">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menú -->
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+
+                    <ul class="navbar-nav mx-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="../HTML/servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../HTML/nosotros">Equipo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../HTML/contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../HTML/blogs.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../HTML/tienda.html">Tienda</a>
+                        </li>
+
+                    </ul>
+
+                    <!-- Botón Login -->
+                    <a href="../HTML/login.html"
+                       class="btn btn-primary"
+                       style="background-color: #d99b43; border-color: #d99b43;">
+                        Iniciar sesión
+                    </a>
+
+                    <!-- Botón Cita -->
+                    <a href="../HTML/cita.html"
+                       class="btn btn-primary ms-2"
+                       style="background-color: #d99b43; border-color: #d99b43;">
+                        Reservar cita
+                    </a>
+
+                    <!-- Carrito -->
+                    <a href="../HTML/carrito.html" class="btn btn-carrito ms-2">
+                        🛒
+                        <span id="contadorCarrito"></span>
+                    </a>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- CONTENIDO -->
+
+    <main class="container py-5">
+
+        <div class="text-center mb-4">
+            <h1>Reservar una cita</h1>
+            <p>Completa los datos para solicitar una hora para tu mascota.</p>
+        </div>
+
+        <div class="cita-container">
+
+            <form id="formCita">
+
+                <!-- Mascota -->
+                <div class="mb-3">
+                    <label for="mascota" class="form-label">
+                        Nombre de la mascota
+                    </label>
+
+                    <input type="text"
+                           class="form-control"
+                           id="mascota"
+                           maxlength="50"
+                           placeholder="Ej: Luna"
+                           required>
+                </div>
+
+
+                <!-- Servicio -->
+                <div class="mb-3">
+                    <label for="servicio" class="form-label">
+                        Servicio
+                    </label>
+
+                    <select class="form-select" id="servicio" required>
+                        <option value="">Selecciona un servicio</option>
+                        <option value="Consulta veterinaria">
+                            Consulta veterinaria
+                        </option>
+                        <option value="Vacunación">
+                            Vacunación
+                        </option>
+                        <option value="Desparasitación">
+                            Desparasitación
+                        </option>
+                        <option value="Control médico">
+                            Control médico
+                        </option>
+                        <option value="Peluquería">
+                            Peluquería
+                        </option>
+                    </select>
+                </div>
+
+
+                <!-- Fecha -->
+                <div class="mb-3">
+                    <label for="fecha" class="form-label">
+                        Fecha
+                    </label>
+
+                    <input type="date"
+                           class="form-control"
+                           id="fecha"
+                           required>
+                </div>
+
+
+                <!-- Hora -->
+                <div class="mb-3">
+                    <label for="hora" class="form-label">
+                        Hora
+                    </label>
+
+                    <select class="form-select" id="hora" required>
+                        <option value="">Selecciona una hora</option>
+                        <option value="09:00">09:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="12:00">12:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="15:00">15:00</option>
+                        <option value="16:00">16:00</option>
+                        <option value="17:00">17:00</option>
+                    </select>
+                </div>
+
+
+                <!-- Motivo -->
+                <div class="mb-3">
+                    <label for="motivo" class="form-label">
+                        Motivo de la consulta
+                    </label>
+
+                    <textarea class="form-control"
+                              id="motivo"
+                              rows="4"
+                              maxlength="200"
+                              placeholder="Cuéntanos brevemente el motivo de la consulta..."
+                              required></textarea>
+                </div>
+
+
+                <!-- Botón -->
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-cita">
+                        Reservar cita
+                    </button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../JS/cita.js"></script>
+
+</body>
+</html>
+
