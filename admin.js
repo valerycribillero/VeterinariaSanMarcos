@@ -1,5 +1,5 @@
 /* =========================
-   PROTEGER PANEL ADMINISTRADOR
+PROTEGER PANEL ADMINISTRADOR
 ========================= */
 let usuarioActual = JSON.parse(
     localStorage.getItem("usuarioActual")
